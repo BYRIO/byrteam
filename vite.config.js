@@ -8,7 +8,18 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig(({ ssrBuild }) => {
     return {
         base: './',
-        build: {},
+        build: {
+            rollupOptions: {
+                output: {
+                    assetFileNames: 'static/[hash].[ext]',
+                    entryFileNames: `static/[hash].js`,
+                    chunkFileNames: `static/[hash].js`,
+                },
+            },
+        },
+        esbuild: {
+            charset: 'utf8',
+        },
         plugins: [
             vue(),
             AutoImport({
