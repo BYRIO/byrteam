@@ -1,6 +1,6 @@
 <template>
   <footer>
-      <div class="team">2003 ~ 2021 © 北邮人团队 BYR TEAM</div>
+      <div class="team">2003 ~ 2022 © 北邮人团队 BYR TEAM</div>
       <div class="team">Design & Code with <span class="love">❤</span></div>
   </footer>
 </template>
