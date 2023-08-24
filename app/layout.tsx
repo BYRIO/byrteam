@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={clsx(inter.className, 'relative')}>
         <Header />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

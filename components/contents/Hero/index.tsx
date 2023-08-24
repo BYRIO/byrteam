@@ -106,7 +106,7 @@ export default function Hero() {
             </p>
           </div>
           <a
-            className="text inline-block w-fit rounded-full bg-white/40 px-8 py-4"
+            className="text mb-4 inline-block w-fit rounded-full bg-white/40 px-8 py-4"
             href="/"
           >
             加入我们
