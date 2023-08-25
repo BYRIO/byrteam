@@ -46,13 +46,13 @@ function HeroBG() {
     <div className="absolute inset-x-0">
       <div className="relative overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pan-y">
-          {/* <EmblaCarouselItemWrapper>
+          <EmblaCarouselItemWrapper>
             <Image
               className="h-screen select-none object-cover"
               src={HeroBG1}
               alt=""
             />
-          </EmblaCarouselItemWrapper> */}
+          </EmblaCarouselItemWrapper>
           {[
             'bg-red-200',
             'bg-orange-300',
