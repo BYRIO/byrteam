@@ -11,7 +11,13 @@ export default function Department() {
   const [selected, setSelected] = useState(0);
 
   return (
-    <section className="mx-auto max-w-[1200px] pt-12">
+    <motion.section
+      className="mx-auto max-w-[1200px] pt-12"
+      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ y: 100, opacity: 0.1 }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+    >
       <ChalkTitle title="部门介绍" />
       <div className="mt-3 py-9">
         <div className="flex gap-3 rounded-2xl bg-white p-6">
@@ -67,6 +73,6 @@ export default function Department() {
           </main>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

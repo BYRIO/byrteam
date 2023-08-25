@@ -78,7 +78,7 @@ export default function Hero() {
   return (
     <motion.section className={clsx('relative')}>
       <HeroBG />
-      <div className="relative box-border flex h-screen w-fit items-center pl-20  pt-[84px] sm:min-h-[700px]">
+      <div className="pointer-events-none relative box-border flex h-screen w-fit items-center bg-gradient-to-r from-black/40  to-transparent pl-20 pr-40 pt-[84px] sm:min-h-[700px]">
         <div className="flex max-w-[564px] flex-col gap-14 text-white">
           <div className="font-smiley text-[64px] leading-normal">
             <p>We want you:</p>
@@ -96,7 +96,7 @@ export default function Hero() {
             <p className="mt-3">
               点击加入群聊
               <a
-                className="underline underline-offset-4"
+                className="pointer-events-auto underline underline-offset-4"
                 href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=d5L-wJPXBmx8KUFgl9bdcVeOcg5rBPQF&authKey=UCJz3szW5XT%2BYeraU7QAgzXW2kKU9Z5ZsRavw%2FXiThBPTnI06kx4OGMNZQX%2BA9NF&noverify=0&group_code=259579529"
                 rel="noreferrer noopener"
               >
@@ -106,7 +106,7 @@ export default function Hero() {
             </p>
           </div>
           <a
-            className="text mb-4 inline-block w-fit rounded-full bg-white/40 px-8 py-4"
+            className="text pointer-events-auto mb-4 inline-block w-fit rounded-full bg-white/40 px-8 py-4"
             href="/"
           >
             加入我们

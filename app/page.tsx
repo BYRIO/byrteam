@@ -8,7 +8,12 @@ import JoinAndReason from '@/components/contents/JoinAndReason';
 import SenpaiSaying from '@/components/contents/SenpaiSaying';
 import NoticeAndProcess from '@/components/contents/NoticeAndProcess';
 
+import { useEffect } from 'react';
+
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero />

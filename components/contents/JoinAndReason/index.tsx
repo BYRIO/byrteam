@@ -1,5 +1,7 @@
 import ChalkTitle from '@/components/common/ChalkTitle';
 
+import { motion } from 'framer-motion';
+
 import IconFree from '@/assets/images/join-team/icon-free.svg';
 import IconHarvest from '@/assets/images/join-team/icon-harvest.svg';
 import IconClap from '@/assets/images/join-team/icon-clap.svg';
@@ -32,7 +34,13 @@ const reasons = [
 
 export default function JoinAndReason() {
   return (
-    <section className="mx-auto max-w-[1200px] pt-12">
+    <motion.section
+      className="mx-auto max-w-[1200px] pt-12"
+      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ y: 100, opacity: 0.1 }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+    >
       <ChalkTitle title="加入byrTeam的N个理由" />
       <div className="mx-auto mt-3 flex items-center justify-center gap-6 py-9">
         {reasons.map(({ title, icon: Icon, description }, index) => (
@@ -48,6 +56,6 @@ export default function JoinAndReason() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

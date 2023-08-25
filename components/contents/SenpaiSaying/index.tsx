@@ -3,7 +3,7 @@
 import ChalkTitle from '@/components/common/ChalkTitle';
 import Cards from './Cards';
 import IconArrow from '@/assets/images/senpai-saying/icon-arrow.svg';
-
+import { motion } from 'framer-motion';
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { useCallback, useEffect, useState } from 'react';
@@ -40,7 +40,13 @@ export default function SenpaiSaying() {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
   return (
-    <section className="mx-auto pt-12">
+    <motion.section
+      className="mx-auto pt-12"
+      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ y: 100, opacity: 0.1 }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+    >
       <div className="mx-auto max-w-[1200px]">
         <ChalkTitle title="学长学姐说" />
       </div>
@@ -78,6 +84,6 @@ export default function SenpaiSaying() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

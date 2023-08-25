@@ -1,9 +1,17 @@
+import { motion } from 'framer-motion';
+
 import ChalkTitle from '@/components/common/ChalkTitle';
 import AsteriskIcon from '@/assets/images/about-team/asterisk.svg';
 
 export default function AboutTeam() {
   return (
-    <section className="mx-auto max-w-[1200px] pt-12">
+    <motion.section
+      className="mx-auto max-w-[1200px] pt-12"
+      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ y: 100, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+    >
       <ChalkTitle title="关于BYR-Team" />
       <div className="mt-3 px-6 py-9 leading-loose">
         <p className="relative w-fit">
@@ -24,6 +32,6 @@ export default function AboutTeam() {
           4个大组，一代代团队成员，用青春抒写着北邮人的辉煌历程。无论你是技术控，还是气氛组，是爱热闹，还是享受奋斗，你都能在北邮人团队找到你大展宏图的地方。
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={clsx(SmileySans.variable, 'relative')}>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={clsx(SmileySans.variable, 'relative overflow-x-hidden')}>
         <Header />
         <main>{children}</main>
         <Footer />

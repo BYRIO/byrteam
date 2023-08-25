@@ -13,7 +13,13 @@ import Underline from '@/assets/images/service/underline.svg';
 export default function Service() {
   const [selected, setSelected] = useState(0);
   return (
-    <section className="mx-auto max-w-[1200px] pt-12">
+    <motion.section
+      className="mx-auto max-w-[1200px] pt-12"
+      whileInView={{ y: 0, opacity: 1 }}
+      initial={{ y: 100, opacity: 0.1 }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
+      viewport={{ once: true }}
+    >
       <ChalkTitle title="我们的产品" />
       <div className="mt-3">
         <div className="flex flex-col gap-6">
@@ -34,9 +40,7 @@ export default function Service() {
                   width={index === selected ? 100 : 54}
                   alt={service.name}
                 />
-                <AnimatePresence>
-                  {index === selected && <AnimatedCircle />}
-                </AnimatePresence>
+                {index === selected && <AnimatedCircle />}
               </div>
             ))}
           </div>
@@ -60,6 +64,6 @@ export default function Service() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
