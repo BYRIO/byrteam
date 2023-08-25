@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { DepartmentCard, departments } from './departments';
 import clsx from 'clsx';
+import AnimatedSilk from './AnimatedSilk';
 
 export default function Department() {
   const [selected, setSelected] = useState(0);
@@ -47,7 +48,7 @@ export default function Department() {
               ))}
             </ul>
           </nav>
-          <main className="grow">
+          <main className="relative grow">
             <AnimatePresence mode="wait">
               <motion.div
                 className="h-full"
@@ -59,6 +60,9 @@ export default function Department() {
               >
                 <DepartmentCard {...departments[selected]} />
               </motion.div>
+              <div className="absolute bottom-0 right-0 translate-x-20 translate-y-16">
+                <AnimatedSilk />
+              </div>
             </AnimatePresence>
           </main>
         </div>

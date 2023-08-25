@@ -45,7 +45,7 @@ export function DepartmentCard({
       <div className="basis-1/2 px-6 text-xl leading-[180%] [&>p]:indent-8">
         {description}
       </div>
-      <div className="h-full w-px bg-black/20"></div>
+      <div className="w-px self-stretch bg-black/20"></div>
       <div className="flex basis-1/2 flex-col gap-6 px-6">
         <ChalkSpan content="岗位要求" />
         <div className="flex flex-col gap-1">
