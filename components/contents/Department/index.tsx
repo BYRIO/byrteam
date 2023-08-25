@@ -3,7 +3,7 @@
 import ChalkTitle from '@/components/common/ChalkTitle';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { departments } from './departments';
+import { DepartmentCard, departments } from './departments';
 import clsx from 'clsx';
 
 export default function Department() {
@@ -38,7 +38,7 @@ export default function Department() {
                   )}
                   <span
                     className={clsx(
-                      'relative text-2xl tracking-[3.6px] transition duration-500'
+                      'relative whitespace-nowrap text-2xl tracking-[3.6px] transition duration-500'
                     )}
                   >
                     {item.name}
@@ -57,9 +57,7 @@ export default function Department() {
                 exit={{ x: 10, opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex h-full items-center justify-center">
-                  动态效果示例{['🍅', '🥬', '🧀', '🥕'][selected]}
-                </div>
+                <DepartmentCard {...departments[selected]} />
               </motion.div>
             </AnimatePresence>
           </main>

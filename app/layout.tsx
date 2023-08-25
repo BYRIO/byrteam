@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={clsx(SmileySans.variable, 'relative')}>
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
