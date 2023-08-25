@@ -9,7 +9,7 @@ export default function ChalkTitle({ title }: { title: string }) {
           'bg-gradient-to-r from-[#0067D1A6] to-[#D9D9D900]'
         )}
       ></div>
-      <h2 className="relative text-3xl italic">{title}</h2>
+      <h2 className="font-smiley relative text-3xl italic">{title}</h2>
     </div>
   );
 }

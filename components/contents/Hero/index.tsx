@@ -80,7 +80,7 @@ export default function Hero() {
       <HeroBG />
       <div className="relative box-border flex h-screen w-fit items-center pl-20  pt-[84px] sm:min-h-[700px]">
         <div className="flex max-w-[564px] flex-col gap-14 text-white">
-          <div className="text-[64px] font-bold leading-normal">
+          <div className="font-smiley text-[64px] leading-normal">
             <p>We want you:</p>
             <p>我们在这里，等风也等你</p>
           </div>

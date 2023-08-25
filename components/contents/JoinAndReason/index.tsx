@@ -42,8 +42,8 @@ export default function JoinAndReason() {
           >
             <Icon height={150} className="z-10 mx-auto -mb-20" />
             <div className="grow rounded-2xl bg-white px-12 pb-9 pt-[100px] text-center">
-              <h3 className="text-[28px] font-bold">{title}</h3>
-              <p className="text-[#585858]">{description}</p>
+              <h3 className="font-smiley text-[28px]">{title}</h3>
+              <p className="mt-5 text-[#585858]">{description}</p>
             </div>
           </div>
         ))}

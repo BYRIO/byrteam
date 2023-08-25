@@ -20,6 +20,9 @@ dependencies:
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
+  dayjs:
+    specifier: ^1.11.9
+    version: registry.npmmirror.com/dayjs@1.11.9
   embla-carousel-autoplay:
     specifier: 8.0.0-rc12
     version: registry.npmmirror.com/embla-carousel-autoplay@8.0.0-rc12(embla-carousel@8.0.0-rc12)
@@ -4372,6 +4375,12 @@ packages:
       readdirp: registry.npmmirror.com/readdirp@3.6.0
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents@2.3.2
+    dev: false
+
+  registry.npmmirror.com/dayjs@1.11.9:
+    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.9.tgz}
+    name: dayjs
+    version: 1.11.9
     dev: false
 
   registry.npmmirror.com/embla-carousel-autoplay@8.0.0-rc12(embla-carousel@8.0.0-rc12):
