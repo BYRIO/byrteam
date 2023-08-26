@@ -113,9 +113,11 @@ function SenpaiCard(
   return (
     <div className="relative min-w-0 flex-[0_0_723px] self-end pl-1">
       <div className="relative flex items-center">
-        <Avatar width={275} />
-        <div className="flex flex-col gap-5">
-          <div className="flex items-end gap-4">
+        <div className='scale-75 sm:scale-100'>
+          <Avatar width={275} /> 
+        </div>
+        <div className="flex flex-col gap-5 -mx-10 sm:-mx-0">
+          <div className="flex max-sm:flex-col sm:items-end gap-2">
             <span className="font-smiley text-2xl">
               @{name}「{department}」
             </span>
@@ -124,7 +126,7 @@ function SenpaiCard(
             </span>
           </div>
           <div className="text-sm">
-            <div>
+            <div className='max-sm:-mt-4'>
               {achievements
                 .slice(0, achievements.length / 2)
                 .map((item, index) => (
@@ -151,8 +153,11 @@ function SenpaiCard(
           </div>
         </div>
       </div>
-      <div className="-mt-[72px] mb-8 flex items-end justify-end">
-        <div className="max-w-[554px] rounded-2xl bg-white px-[50px] py-[45px]">
+      <div className="-mt-[72px] mb-8 flex items-end justify-start sm:justify-end max-sm:ml-32">
+        <div className={clsx(
+          "max-w-[554px] rounded-2xl bg-white px-[50px] py-[45px]",
+          "max-sm:max-w-[350px] max-sm:px-[30px] max-sm:py-[25px]"
+        )}>
           {saying}
         </div>
         <Quote className="-mb-8 -ml-[46px]" />
