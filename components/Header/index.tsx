@@ -3,15 +3,45 @@
 import Logo from '@/assets/images/demo-logo.svg';
 import clsx from 'clsx';
 
+import { motion, useCycle } from 'framer-motion';
+
 import { useEffect, useState } from 'react';
+import style from './style.module.scss';
+import MenuToggle from './MenuToggle';
+import { links } from './link';
+import AnimatedMenu from './AnimatedMenu';
 
 function NavigationMenu() {
+  const [isOpen, toggleOpen] = useCycle(false, true);
   return (
-    <nav className="flex gap-16 text-base">
-      <a href="https://bbs.byr.cn/">北邮人论坛</a>
-      <a href="https://byr.pt/">北邮人BT</a>
-      <a href="https://byrio.org/">BYRIO技术社区</a>
-    </nav>
+    <div>
+      <nav className="hidden gap-16 text-base sm:flex">
+        {links.map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {link.name}
+          </a>
+        ))}
+      </nav>
+      <motion.nav
+        className="relative block sm:hidden"
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+      >
+        <AnimatedMenu />
+        <MenuToggle
+          className="rounded-full p-2"
+          onBlur={() => {
+            toggleOpen(0);
+          }}
+          toggle={() => toggleOpen()}
+        />
+      </motion.nav>
+    </div>
   );
 }
 
@@ -31,7 +61,7 @@ export default function Header() {
         className={clsx(
           'absolute top-0 z-[-1] h-full w-full transition duration-500',
           {
-            'border-b bg-[#F5F5F5]/50 backdrop-blur-sm': isBlurBg,
+            [style.BlurBG]: isBlurBg,
           }
         )}
       ></div>

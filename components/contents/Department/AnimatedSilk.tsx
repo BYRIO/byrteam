@@ -13,7 +13,7 @@ export default function AnimatedSilk() {
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 1,
           ease: 'easeInOut',
         }}
         d="M10 175C26.6667 140.5 70.7671 86.8433 114.5 80.5002C180 71 173 128 142 138C111 148 89.5 55.5 258 11"

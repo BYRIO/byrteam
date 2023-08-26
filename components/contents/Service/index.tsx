@@ -16,7 +16,7 @@ export default function Service() {
     <motion.section
       className="mx-auto max-w-[1200px] pt-12"
       whileInView={{ y: 0, opacity: 1 }}
-      initial={{ y: 100, opacity: 0.1 }}
+      initial={{ y: 100, opacity: 0 }}
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >

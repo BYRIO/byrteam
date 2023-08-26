@@ -14,7 +14,7 @@ export default function Department() {
     <motion.section
       className="mx-auto max-w-[1200px] pt-12"
       whileInView={{ y: 0, opacity: 1 }}
-      initial={{ y: 100, opacity: 0.1 }}
+      initial={{ y: 100, opacity: 0 }}
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
@@ -66,10 +66,13 @@ export default function Department() {
               >
                 <DepartmentCard {...departments[selected]} />
               </motion.div>
-              <div className="absolute bottom-0 right-0 translate-x-20 translate-y-16">
-                <AnimatedSilk />
-              </div>
             </AnimatePresence>
+            <div
+              key={departments[selected].name + '-silk'}
+              className="absolute bottom-0 right-0 translate-x-20 translate-y-16"
+            >
+              <AnimatedSilk />
+            </div>
           </main>
         </div>
       </div>

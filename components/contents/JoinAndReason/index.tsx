@@ -6,6 +6,7 @@ import IconFree from '@/assets/images/join-team/icon-free.svg';
 import IconHarvest from '@/assets/images/join-team/icon-harvest.svg';
 import IconClap from '@/assets/images/join-team/icon-clap.svg';
 import { ComponentProps, FC, HTMLProps, ReactNode, SVGProps } from 'react';
+import clsx from 'clsx';
 
 const reasons = [
   {
@@ -35,23 +36,61 @@ const reasons = [
 export default function JoinAndReason() {
   return (
     <motion.section
-      className="mx-auto max-w-[1200px] pt-12"
+      className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}
       whileInView={{ y: 0, opacity: 1 }}
-      initial={{ y: 100, opacity: 0.1 }}
+      initial={{ y: 100, opacity: 0 }}
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
       <ChalkTitle title="加入byrTeam的N个理由" />
-      <div className="mx-auto mt-3 flex items-center justify-center gap-6 py-9">
+      <div
+        className={clsx(
+          'mx-auto mt-3 flex items-center justify-center py-9',
+          'flex-col gap-6',
+          'sm:flex-row sm:gap-3',
+          'lg:gap-6'
+        )}
+      >
         {reasons.map(({ title, icon: Icon, description }, index) => (
           <div
             key={`${title}+${index}`}
-            className="relative flex max-w-[344px] flex-col self-stretch"
+            className="relative flex flex-col items-center self-stretch sm:max-w-[344px] sm:basis-1/3"
           >
-            <Icon height={150} className="z-10 mx-auto -mb-20" />
-            <div className="grow rounded-2xl bg-white px-12 pb-9 pt-[100px] text-center">
-              <h3 className="font-smiley text-[28px]">{title}</h3>
-              <p className="mt-5 text-[#585858]">{description}</p>
+            <Icon
+              className={clsx(
+                'z-10 mx-auto shrink-0',
+                '-mb-6 h-[80px]',
+                'sm:-mb-8 sm:h-[100px]',
+                'lg:-mb-20 lg:h-[150px]'
+              )}
+            />
+            <div
+              className={clsx(
+                'grow rounded-2xl bg-white text-center',
+                'px-6 pb-6 pt-[30px]',
+                'sm:px-6 sm:pb-6 sm:pt-[40px]',
+                'lg:px-12 lg:pb-9 lg:pt-[100px]'
+              )}
+            >
+              <h3
+                className={clsx(
+                  'font-smiley',
+                  'text-[20px]',
+                  'sm:text-[24px]',
+                  'lg:text-[28px]'
+                )}
+              >
+                {title}
+              </h3>
+              <p
+                className={clsx(
+                  'mt-5 text-xs text-[#585858]',
+                  'sm:text-sm',
+                  'lg:text-base'
+                )}
+              >
+                {description}
+              </p>
             </div>
           </div>
         ))}
