@@ -54,13 +54,15 @@ export default function SenpaiSaying() {
       <div className="mt-3 py-9">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex touch-pan-y gap-12">
+            <div className="flex touch-pan-y gap-12 ">
               <Cards />
             </div>
           </div>
+          
           <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent"></div>
           <div className="absolute inset-y-0 right-0 w-1/3  bg-gradient-to-l from-[#F5F5F5] to-transparent"></div>
-          <div className="absolute bottom-2 right-20 flex gap-8">
+          
+          <div className="flex bottom-2 gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
             <button
               className={clsx('scale-x-[-1] rounded-full p-3', {
                 'bg-white text-[#838383]': !prevBtnDisabled,

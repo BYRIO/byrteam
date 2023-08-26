@@ -13,10 +13,10 @@ export default function AboutTeam() {
       viewport={{ once: true }}
     >
       <ChalkTitle title="关于BYR-Team" />
-      <div className="mt-3 px-6 py-9 leading-loose">
+      <div className="mt-3 px-6 py-9 leading-loose space-y-4 sm:space-y-0">
         <p className="relative w-fit">
           有一个地方每个北邮人都来过，却鲜有人知道还有一群人默默陪伴，但从你被北邮录取开始，就已与他们结起一段看不见的缘分。
-          <AsteriskIcon className="absolute -right-8 top-0" />
+          <AsteriskIcon className="absolute -right-5 sm:-right-8 top-0" />
         </p>
         <p>
           {' '}
