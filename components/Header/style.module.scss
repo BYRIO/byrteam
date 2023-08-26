@@ -1,0 +1,9 @@
+.BlurRadialBG {
+  background-image: radial-gradient(rgba(0, 0, 0, 0) 1px, #fff 1px);
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+}
+
+.BlurBG {
+  @apply border-b bg-[#F5F5F5]/50 backdrop-blur-sm;
+}
