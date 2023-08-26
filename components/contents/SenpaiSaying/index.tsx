@@ -47,7 +47,7 @@ export default function SenpaiSaying() {
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
-      <div className="mx-auto max-w-[1200px]">
+      <div className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}>
         <ChalkTitle title="学长学姐说" />
       </div>
 
@@ -58,14 +58,15 @@ export default function SenpaiSaying() {
               <Cards />
             </div>
           </div>
-          
-          <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent"></div>
-          <div className="absolute inset-y-0 right-0 w-1/3  bg-gradient-to-l from-[#F5F5F5] to-transparent"></div>
-          
-          <div className="flex bottom-2 gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
+
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3  bg-gradient-to-l from-[#F5F5F5] to-transparent"></div>
+
+          <div className="bottom-2 flex gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
             <button
               className={clsx('scale-x-[-1] rounded-full p-3 shadow-md', {
-                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white': !prevBtnDisabled,
+                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white':
+                  !prevBtnDisabled,
                 'cursor-not-allowed bg-zinc-300 text-zinc-400': prevBtnDisabled,
               })}
               onClick={scrollPrev}
@@ -75,7 +76,8 @@ export default function SenpaiSaying() {
             </button>
             <button
               className={clsx('rounded-full p-3 shadow-md', {
-                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white': !nextBtnDisabled,
+                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white':
+                  !nextBtnDisabled,
                 'cursor-not-allowed bg-zinc-300 text-zinc-400': nextBtnDisabled,
               })}
               onClick={scrollNext}

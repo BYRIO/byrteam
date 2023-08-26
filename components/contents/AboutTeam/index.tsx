@@ -2,21 +2,22 @@ import { motion } from 'framer-motion';
 
 import ChalkTitle from '@/components/common/ChalkTitle';
 import AsteriskIcon from '@/assets/images/about-team/asterisk.svg';
+import clsx from 'clsx';
 
 export default function AboutTeam() {
   return (
     <motion.section
-      className="mx-auto max-w-[1200px] pt-12"
+      className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}
       whileInView={{ y: 0, opacity: 1 }}
       initial={{ y: 100, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
       <ChalkTitle title="关于BYR-Team" />
-      <div className="mt-3 px-6 py-9 leading-loose space-y-4 sm:space-y-0">
+      <div className="mt-3 space-y-4 px-6 py-9 leading-loose sm:space-y-0">
         <p className="relative w-fit">
           有一个地方每个北邮人都来过，却鲜有人知道还有一群人默默陪伴，但从你被北邮录取开始，就已与他们结起一段看不见的缘分。
-          <AsteriskIcon className="absolute -right-5 sm:-right-8 top-0" />
+          <AsteriskIcon className="absolute -right-5 top-0 sm:-right-8" />
         </p>
         <p>
           {' '}

@@ -54,7 +54,7 @@ export default function JoinAndReason() {
         {reasons.map(({ title, icon: Icon, description }, index) => (
           <div
             key={`${title}+${index}`}
-            className="relative flex flex-col items-center self-stretch sm:max-w-[344px] sm:basis-1/3"
+            className="relative mx-auto flex max-w-[344px] flex-col items-center self-stretch sm:basis-1/3"
           >
             <Icon
               className={clsx(

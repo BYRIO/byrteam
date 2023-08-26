@@ -14,7 +14,7 @@ export default function Service() {
   const [selected, setSelected] = useState(0);
   return (
     <motion.section
-      className="mx-auto max-w-[1200px] pt-12"
+      className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}
       whileInView={{ y: 0, opacity: 1 }}
       initial={{ y: 100, opacity: 0 }}
       transition={{ duration: 0.8, ease: 'easeInOut' }}

@@ -2,6 +2,7 @@ import ChalkTitle from '@/components/common/ChalkTitle';
 import Notice from './Notice';
 import Process from './Process';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
 
 export default function NoticeAndProcess() {
   return (
@@ -12,7 +13,7 @@ export default function NoticeAndProcess() {
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
-      <div className="mx-auto max-w-[1200px]">
+      <div className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}>
         <ChalkTitle title="招新公告与招新流程" />
         <div className="mt-3 py-9">
           <Notice />

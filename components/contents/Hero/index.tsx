@@ -79,7 +79,7 @@ function HeroBG() {
       {/* indicator */}
       <div
         className={clsx(
-          'absolute bottom-[55px] flex gap-1 p-[10px]',
+          'absolute bottom-[55px] hidden gap-1 p-[10px] sm:flex',
           'right-1/2 translate-x-1/2',
           'lg:right-[135px] lg:translate-x-0'
         )}
@@ -111,13 +111,15 @@ export default function Hero() {
   return (
     <motion.section className={clsx('relative')}>
       <HeroBG />
-      <div className={clsx(
-        "pointer-events-none relative box-border flex",
-        "h-screen w-fit items-center bg-gradient-to-r from-black/40  to-transparent",
-        "pl-8 pr-10 pt-[70px]",
-        "sm:pl-20 sm:pr-40  sm:pt-[84px] sm:min-h-[700px]",
-        )}>
-        <div className="max-w-[564px] flex-col gap-14 text-white space-y-4">
+      <div
+        className={clsx(
+          'pointer-events-none relative box-border flex',
+          'h-screen w-fit items-center bg-gradient-to-r from-black/40  to-transparent',
+          'pl-8 pr-10 pt-[70px]',
+          'sm:min-h-[700px] sm:pl-20  sm:pr-40 sm:pt-[84px]'
+        )}
+      >
+        <div className="max-w-[564px] flex-col gap-14 space-y-4 text-white">
           <div className="font-smiley text-[50px] leading-normal sm:text-[64px]">
             <p>We want you:</p>
             <p>我们在这里，等风也等你</p>
@@ -143,19 +145,18 @@ export default function Hero() {
               了解更多吧
             </p>
           </div>
-          <div className='front-medium flex justify-center'>
-              <a
-                className={clsx(
-                  "text pointer-events-auto mb-4 inline-block w-fit rounded-full bg-white/40 ",
-                  "px-10 py-5 sm:px-8 sm:py-4",
-                  "mr-0 sm:mr-auto ",
-                  )}
-                href="/"
-              >
+          <div className="front-medium flex justify-center">
+            <a
+              className={clsx(
+                'text pointer-events-auto mb-4 inline-block w-fit rounded-full bg-white/40 ',
+                'px-10 py-5 sm:px-8 sm:py-4',
+                'mr-0 sm:mr-auto '
+              )}
+              href="/"
+            >
               加入我们
-              </a>
+            </a>
           </div>
-          
         </div>
       </div>
     </motion.section>
