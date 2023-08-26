@@ -78,13 +78,18 @@ export default function Hero() {
   return (
     <motion.section className={clsx('relative')}>
       <HeroBG />
-      <div className="pointer-events-none relative box-border flex h-screen w-fit items-center bg-gradient-to-r from-black/40  to-transparent pl-20 pr-40 pt-[84px] sm:min-h-[700px]">
-        <div className="flex max-w-[564px] flex-col gap-14 text-white">
-          <div className="font-smiley text-[64px] leading-normal">
+      <div className={clsx(
+        "pointer-events-none relative box-border flex",
+        "h-screen w-fit items-center bg-gradient-to-r from-black/40  to-transparent",
+        "pl-8 pr-10 pt-[70px]",
+        "sm:pl-20 sm:pr-40  sm:pt-[84px] sm:min-h-[700px]",
+        )}>
+        <div className="max-w-[564px] flex-col gap-14 text-white space-y-4">
+          <div className="font-smiley text-[50px] leading-normal sm:text-[64px]">
             <p>We want you:</p>
             <p>我们在这里，等风也等你</p>
           </div>
-          <div className="font-medium">
+          <div className="front-medium space-y-4">
             <p>
               北邮人团队成立于 2000 年初，现设技术、美工、产品运营和新媒体工作室
               4 个大组，成员是北邮各学院各年级的在校生。
@@ -105,12 +110,19 @@ export default function Hero() {
               了解更多吧
             </p>
           </div>
-          <a
-            className="text pointer-events-auto mb-4 inline-block w-fit rounded-full bg-white/40 px-8 py-4"
-            href="/"
-          >
-            加入我们
-          </a>
+          <div className='front-medium flex justify-center'>
+              <a
+                className={clsx(
+                  "text pointer-events-auto mb-4 inline-block w-fit rounded-full bg-white/40 ",
+                  "px-10 py-5 sm:px-8 sm:py-4",
+                  "mr-0 sm:mr-auto ",
+                  )}
+                href="/"
+              >
+              加入我们
+              </a>
+          </div>
+          
         </div>
       </div>
     </motion.section>
