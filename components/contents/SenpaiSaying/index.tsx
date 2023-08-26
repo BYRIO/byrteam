@@ -64,8 +64,8 @@ export default function SenpaiSaying() {
           
           <div className="flex bottom-2 gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
             <button
-              className={clsx('scale-x-[-1] rounded-full p-3', {
-                'bg-white text-[#838383]': !prevBtnDisabled,
+              className={clsx('scale-x-[-1] rounded-full p-3 shadow-md', {
+                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white': !prevBtnDisabled,
                 'cursor-not-allowed bg-zinc-300 text-zinc-400': prevBtnDisabled,
               })}
               onClick={scrollPrev}
@@ -74,8 +74,8 @@ export default function SenpaiSaying() {
               <IconArrow />
             </button>
             <button
-              className={clsx('rounded-full p-3', {
-                'bg-[#175DDC] text-white': !nextBtnDisabled,
+              className={clsx('rounded-full p-3 shadow-md', {
+                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white': !nextBtnDisabled,
                 'cursor-not-allowed bg-zinc-300 text-zinc-400': nextBtnDisabled,
               })}
               onClick={scrollNext}
