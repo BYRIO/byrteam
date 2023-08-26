@@ -43,7 +43,15 @@ function HeroBG() {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onInit, onSelect]);
   return (
-    <div className="absolute inset-x-0">
+    <div
+      className="absolute inset-x-0"
+      onPointerEnter={() => {
+        emblaApi?.plugins?.().autoplay?.stop();
+      }}
+      onPointerLeave={() => {
+        emblaApi?.plugins?.().autoplay?.play();
+      }}
+    >
       <div className="relative overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pan-y">
           <EmblaCarouselItemWrapper>
@@ -69,7 +77,32 @@ function HeroBG() {
         </div>
       </div>
       {/* indicator */}
-      <div></div>
+      <div
+        className={clsx(
+          'absolute bottom-[55px] flex gap-1 p-[10px]',
+          'right-1/2 translate-x-1/2',
+          'lg:right-[135px] lg:translate-x-0'
+        )}
+      >
+        {scrollSnaps.map((snap, index) => (
+          <button
+            onClick={() => {
+              scrollTo(index);
+            }}
+            onPointerEnter={() => {
+              scrollTo(index);
+            }}
+            className="py-1"
+          >
+            <div
+              className={clsx('h-[3px] w-8 rounded-full', {
+                'bg-white': index === selectedIndex,
+                'bg-white/40': index !== selectedIndex,
+              })}
+            ></div>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
