@@ -1,5 +1,7 @@
+'use client';
 import { ComponentProps } from 'react';
 import IconArrow from '@/assets/images/senpai-saying/icon-arrow.svg';
+import { useCycle, motion, AnimatePresence } from 'framer-motion';
 
 import dayjs from 'dayjs';
 import clsx from 'clsx';
@@ -27,6 +29,21 @@ const notices = [
     time: '2023-08-21 15:30',
     href: '',
   },
+  {
+    title: '北邮人2024招新公告',
+    time: '2023-08-21 15:30',
+    href: '',
+  },
+  {
+    title: '北邮人2024招新公告',
+    time: '2023-08-21 15:30',
+    href: '',
+  },
+  {
+    title: '北邮人2024招新公告',
+    time: '2023-08-21 15:30',
+    href: '',
+  },
 ] as Array<ComponentProps<typeof NoticeItem>>;
 
 function Tag({ name }: { name: string }) {
@@ -45,12 +62,16 @@ function NoticeItem(props: {
 }) {
   const { title, time, href, tag } = props;
   return (
-    <div
+    <motion.div
       className={clsx(
         'flex justify-between',
         'flex-col items-start gap-1',
         'sm:flex-row sm:items-center'
       )}
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
     >
       <div
         className={clsx(
@@ -71,20 +92,34 @@ function NoticeItem(props: {
         </div>
       </div>
       <div className=" whitespace-nowrap text-sm text-[#9A9A9A]">{time}</div>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Notice() {
+  const [showMore, toggleShowMore] = useCycle(false, true);
   return (
-    <div className="flex flex-col gap-6 rounded-[18px] bg-white p-9">
-      {notices.map((item, index) => (
+    <motion.div
+      layout
+      className="flex flex-col gap-6 rounded-[18px] bg-white p-9"
+    >
+      {notices.slice(0, showMore ? undefined : 4).map((item, index) => (
         <NoticeItem key={`${item.title}-${index}`} {...item} />
       ))}
-      <button className="flex w-fit items-center gap-2 text-sm leading-none text-black opacity-50 lg:text-xl">
+      <motion.button
+        onClick={() => toggleShowMore()}
+        layout
+        className="flex w-fit items-center gap-2 text-sm leading-none text-black opacity-50 lg:text-xl"
+      >
         展开更多
-        <IconArrow width={16} className="rotate-90" />
-      </button>
-    </div>
+        <IconArrow
+          width={16}
+          className={clsx('transition duration-500', {
+            'rotate-90': !showMore,
+            '-rotate-90': showMore,
+          })}
+        />
+      </motion.button>
+    </motion.div>
   );
 }

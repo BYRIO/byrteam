@@ -1,7 +1,7 @@
 import ChalkTitle from '@/components/common/ChalkTitle';
 import Notice from './Notice';
 import Process from './Process';
-import { motion } from 'framer-motion';
+import { motion, LayoutGroup } from 'framer-motion';
 import clsx from 'clsx';
 
 export default function NoticeAndProcess() {
@@ -15,11 +15,18 @@ export default function NoticeAndProcess() {
     >
       <div className={clsx('mx-auto max-w-[1280px]', 'px-4', 'sm:px-10')}>
         <ChalkTitle title="招新公告与招新流程" />
-        <div className="mt-3 py-3 sm:py-9">
-          <Notice />
-        </div>
       </div>
-      <Process />
+      <LayoutGroup>
+        <motion.div
+          layout
+          className={clsx(
+            'mx-auto mt-3 max-w-[1280px] px-4 py-3 sm:px-10 sm:py-9'
+          )}
+        >
+          <Notice />
+        </motion.div>
+        <Process />
+      </LayoutGroup>
     </motion.section>
   );
 }
