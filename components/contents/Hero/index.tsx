@@ -93,6 +93,7 @@ function HeroBG() {
               scrollTo(index);
             }}
             className="py-1"
+            key={index}
           >
             <div
               className={clsx('h-[3px] w-8 rounded-full', {

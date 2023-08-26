@@ -45,7 +45,7 @@ export default function JoinAndReason() {
       <ChalkTitle title="加入byrTeam的N个理由" />
       <div
         className={clsx(
-          'mx-auto mt-3 flex items-center justify-center py-9',
+          'mx-auto mt-3 flex items-center justify-center py-3 sm:py-9',
           'flex-col gap-6',
           'sm:flex-row sm:gap-3',
           'lg:gap-6'

@@ -47,11 +47,11 @@ export default function SenpaiSaying() {
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
-      <div className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}>
+      <div className={clsx('mx-auto max-w-[1280px]', 'px-4', 'sm:px-10')}>
         <ChalkTitle title="学长学姐说" />
       </div>
 
-      <div className="mt-3 py-9">
+      <div className="mt-3 py-3 sm:py-9">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex touch-pan-y gap-12 ">

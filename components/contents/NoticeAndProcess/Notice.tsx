@@ -2,6 +2,7 @@ import { ComponentProps } from 'react';
 import IconArrow from '@/assets/images/senpai-saying/icon-arrow.svg';
 
 import dayjs from 'dayjs';
+import clsx from 'clsx';
 const notices = [
   {
     title: '北邮人2023招新公告',
@@ -44,10 +45,24 @@ function NoticeItem(props: {
 }) {
   const { title, time, href, tag } = props;
   return (
-    <div className="flex items-center justify-between text-xl">
-      <div className="flex items-center gap-6">
-        <a href={href}>{title}</a>
-        <div className="flex items-center gap-2">
+    <div
+      className={clsx(
+        'flex justify-between',
+        'flex-col items-start gap-1',
+        'sm:flex-row sm:items-center'
+      )}
+    >
+      <div
+        className={clsx(
+          'flex shrink flex-nowrap self-stretch text-xl',
+          'flex-col items-start gap-1',
+          'sm:flex-row sm:items-center sm:gap-6'
+        )}
+      >
+        <a className=" line-clamp-1" href={href}>
+          {title}
+        </a>
+        <div className="flex shrink-0 items-center gap-2">
           {tag &&
             tag.length > 0 &&
             tag.map((item, index) => (
@@ -55,7 +70,7 @@ function NoticeItem(props: {
             ))}
         </div>
       </div>
-      <div className="text-[#9A9A9A]">{time}</div>
+      <div className=" whitespace-nowrap text-sm text-[#9A9A9A]">{time}</div>
     </div>
   );
 }
@@ -66,7 +81,7 @@ export default function Notice() {
       {notices.map((item, index) => (
         <NoticeItem key={`${item.title}-${index}`} {...item} />
       ))}
-      <button className="flex w-fit items-center gap-2 text-xl leading-none text-black opacity-50">
+      <button className="flex w-fit items-center gap-2 text-sm leading-none text-black opacity-50 lg:text-xl">
         展开更多
         <IconArrow width={16} className="rotate-90" />
       </button>

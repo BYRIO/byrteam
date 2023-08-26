@@ -19,7 +19,7 @@ export default function Department() {
       viewport={{ once: true }}
     >
       <ChalkTitle title="部门介绍" />
-      <div className="mt-3 py-9">
+      <div className="mt-3 py-3 sm:py-9">
         <div className="flex gap-3 rounded-2xl bg-white p-6">
           <nav className="rounded-xl bg-[#F5F5F5] p-6">
             <ul className="flex flex-col gap-6">
