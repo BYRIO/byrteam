@@ -48,7 +48,7 @@ const notices = [
 
 function Tag({ name }: { name: string }) {
   return (
-    <div className="box-content rounded-[4px] border-[1.5px] border-solid border-[#0067D1] px-2 py-[2px] text-sm text-[#0067D1]">
+    <div className="box-content rounded-[4px] border-[1.5px] border-solid border-[#0067D1] px-2 py-[2px] text-xs text-[#0067D1] sm:text-sm">
       {name}
     </div>
   );
@@ -75,12 +75,12 @@ function NoticeItem(props: {
     >
       <div
         className={clsx(
-          'flex shrink flex-nowrap self-stretch text-xl',
+          'flex shrink flex-nowrap self-stretch',
           'flex-col items-start gap-1',
           'sm:flex-row sm:items-center sm:gap-6'
         )}
       >
-        <a className=" line-clamp-1" href={href}>
+        <a className="line-clamp-1 text-base sm:text-xl" href={href}>
           {title}
         </a>
         <div className="flex shrink-0 items-center gap-2">
@@ -91,7 +91,9 @@ function NoticeItem(props: {
             ))}
         </div>
       </div>
-      <div className=" whitespace-nowrap text-sm text-[#9A9A9A]">{time}</div>
+      <div className=" whitespace-nowrap text-xs text-[#9A9A9A] sm:text-sm">
+        {time}
+      </div>
     </motion.div>
   );
 }
@@ -101,7 +103,7 @@ export default function Notice() {
   return (
     <motion.div
       layout
-      className="flex flex-col gap-6 rounded-[18px] bg-white p-9"
+      className="flex flex-col gap-3 rounded-[18px] bg-white p-6 sm:gap-6 sm:p-9"
     >
       {notices.slice(0, showMore ? undefined : 4).map((item, index) => (
         <NoticeItem key={`${item.title}-${index}`} {...item} />
