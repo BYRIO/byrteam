@@ -59,7 +59,7 @@ export default function Header() {
     <header className="fixed top-0 z-30 w-full">
       <div
         className={clsx(
-          'absolute top-0 z-[-1] h-full w-full transition duration-500',
+          'absolute top-0 z-[-1] h-full w-full transition-colors duration-500',
           {
             [style.BlurBG]: isBlurBg,
           }

@@ -76,8 +76,8 @@ function NoticeItem(props: {
       <div
         className={clsx(
           'flex shrink flex-nowrap self-stretch',
-          'flex-col items-start gap-1',
-          'sm:flex-row sm:items-center sm:gap-6'
+          'items-start gap-1',
+          'sm:items-center sm:gap-6'
         )}
       >
         <a className="line-clamp-1 text-base sm:text-xl" href={href}>
