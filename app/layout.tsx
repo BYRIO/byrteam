@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden">
       <body className={clsx(SmileySans.variable, 'relative overflow-x-hidden')}>
         <Header />
-        <main>{children}</main>
+        <main className="overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>
