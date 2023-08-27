@@ -21,7 +21,7 @@ export default function Department() {
       <ChalkTitle title="部门介绍" />
       <div className="mt-3 py-3 sm:py-9">
         <div className="flex flex-col gap-3 rounded-2xl bg-white p-3 sm:p-6 lg:flex-row">
-          <nav className="rounded-xl bg-[#F5F5F5] p-1 sm:p-3 lg:p-6">
+          <nav className="rounded-xl bg-[#F5F5F5] p-3 sm:p-3 lg:p-6">
             <ul className="flex justify-between sm:gap-4 lg:flex-col lg:gap-6">
               {departments.map(({ name, icon: Icon }, index) => (
                 <li
@@ -39,6 +39,7 @@ export default function Department() {
                     setSelected(index);
                   }}
                 >
+                  <Icon className="block sm:hidden" width={24} height={24} />
                   <div
                     className={clsx(
                       'relative w-full self-stretch text-center',
@@ -73,7 +74,6 @@ export default function Department() {
                       {name}
                     </span>
                   </div>
-                  <Icon className="block sm:hidden" width={24} height={24} />
                 </li>
               ))}
             </ul>

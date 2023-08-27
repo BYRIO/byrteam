@@ -10,7 +10,7 @@ import clsx from 'clsx';
 
 function ChalkSpan({ content }: { content: string }) {
   return (
-    <div className="relative block w-fit">
+    <div className="max-sm:scale-75 max-sm:-ml-3 relative block w-fit">
       <div
         className={clsx(
           'absolute bottom-0 h-3/5 w-full',
@@ -75,34 +75,43 @@ export function DepartmentCard({
 }) {
   return (
     <div className="flex h-full flex-col gap-1 text-[#333] sm:flex-row sm:gap-0">
-      <div className="basis-3/5 px-6 text-base leading-[180%] sm:text-xl [&>p]:indent-8">
+      <div className="max-sm:mt-2 basis-3/5 px-3 text-base leading-[180%] sm:text-xl [&>p]:indent-8">
         {description}
       </div>
+      <hr className='mt-2 mb-2 sm:hidden'></hr>
       <div className="w-px self-stretch bg-black/20"></div>
-      <div className="flex basis-2/5 flex-col gap-6 px-6">
-        <ChalkSpan content="岗位要求" />
-        <RequirementGroup title="基础要求：" requirement={requirement} />
-        <RequirementGroup
-          title="可选要求："
-          requirement={optionalRequirement}
-        />
-        <ChalkSpan content="过往作品" />
-        <div className="flex flex-wrap items-center [&>a]:shrink-0">
-          {work.map(({ href = '', type = 'primary', title }, index) => (
-            <a
-              key={href + index}
-              className={clsx(
-                'mb-[10px] mr-[10px] inline-block cursor-pointer rounded-full border-2 border-solid border-[#338EEC] px-4 py-[2px] text-lg',
-                {
-                  'bg-white text-[#338EEC]': type === 'secondary',
-                  'bg-[#338EEC] text-white': type === 'primary',
-                }
-              )}
-            >
-              {title}
-            </a>
-          ))}
+      <div className="flex flex-row basis-2/5 sm:gap-6 px-3 max-sm:space-x-6 sm:flex-col">
+        <div className='space-y-4 min-w-[50%]'>
+          <div className='whitespace-nowrap'>
+            <ChalkSpan content="岗位要求" />
+          </div>
+          <RequirementGroup title="基础要求：" requirement={requirement} />
+          <RequirementGroup
+            title="可选要求："
+            requirement={optionalRequirement}
+          />
         </div>
+        
+        <div className='sm:space-y-4'>
+          <ChalkSpan content="过往作品" />
+          <div className="max-sm:-mt-5 max-sm:-ml-5 max-sm:scale-75 flex flex-wrap items-center [&>a]:shrink-0">
+            {work.map(({ href = '', type = 'primary', title }, index) => (
+              <a
+                key={href + index}
+                className={clsx(
+                  'mb-[10px] mr-[10px] inline-block cursor-pointer rounded-full border-2 border-solid border-[#338EEC] px-4 py-[2px] text-lg',
+                  {
+                    'bg-white text-[#338EEC]': type === 'secondary',
+                    'bg-[#338EEC] text-white': type === 'primary',
+                  }
+                )}
+              >
+                {title}
+              </a>
+            ))}
+          </div>
+        </div>
+        
       </div>
     </div>
   );
@@ -113,7 +122,7 @@ export const departments = [
     name: '技术组',
     description: (
       <>
-        <div className="h-72 w-full rounded-lg bg-cyan-400"></div>
+        <div className="h-52 sm:h-72 w-full rounded-lg bg-cyan-400 mb-2"></div>
         <p>这里汇集了研发、技术、运维、设计等各路大佬，是BYR坚强的技术后盾。</p>
         <p>
           我们负责技术项目研发，对团队现有产品进行维护和更新、保证系统正常运行。为学校活动、师生便利提供技术支持，构建学校内开源共享氛围，是每个技术人员的职责与使命。
