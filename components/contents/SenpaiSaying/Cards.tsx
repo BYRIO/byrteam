@@ -113,10 +113,10 @@ function SenpaiCard(
   return (
     <div className="relative min-w-0 flex-[0_0_723px] self-end pl-1">
       <div className="relative flex items-center">
-        <div className='scale-75 sm:scale-100'>
+        <div className='scale-75 mx-10 sm:scale-100 max-sm:-mt-7 '>
           <Avatar width={275} /> 
         </div>
-        <div className="flex flex-col gap-5 -mx-10 sm:-mx-0">
+        <div className="flex flex-col gap-5 -mx-[100px] -mt-5 sm:mt-0 sm:-mx-0">
           <div className="flex max-sm:flex-col sm:items-end gap-2">
             <span className="font-smiley text-2xl">
               @{name}「{department}」
@@ -125,8 +125,8 @@ function SenpaiCard(
               {identity}
             </span>
           </div>
-          <div className="text-sm">
-            <div className='max-sm:-mt-4'>
+          <div className="text-sm max-sm:text-xs">
+            <div className='max-sm:-mx-[12px] max-sm:-mt-4'>
               {achievements
                 .slice(0, achievements.length / 2)
                 .map((item, index) => (
@@ -138,7 +138,7 @@ function SenpaiCard(
                   </div>
                 ))}
             </div>
-            <div className="mt-1">
+            <div className="max-sm:-mx-[8px] sm:mt-2">
               {achievements
                 .slice(achievements.length / 2)
                 .map((item, index) => (
@@ -153,14 +153,14 @@ function SenpaiCard(
           </div>
         </div>
       </div>
-      <div className="-mt-[72px] mb-8 flex items-end justify-start sm:justify-end max-sm:ml-32">
+      <div className="-mt-[72px] mb-8 flex items-end justify-start max-sm:px-2 sm:justify-end max-sm:ml-32">
         <div className={clsx(
           "max-w-[554px] rounded-2xl bg-white px-[50px] py-[45px]",
-          "max-sm:max-w-[350px] max-sm:px-[30px] max-sm:py-[25px]"
+          "max-sm:max-w-[320px] max-sm:px-[30px] max-sm:py-[25px] "
         )}>
           {saying}
         </div>
-        <Quote className="-mb-8 -ml-[46px]" />
+        <Quote className="max-sm:scale-50 max-sm:-ml-[60px] -mb-8 -ml-[46px]" />
       </div>
     </div>
   );
