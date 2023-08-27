@@ -33,11 +33,7 @@ function MobileButtonGroup({
     align: 'center',
     containScroll: false,
   });
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [tweenValues, setTweenValues] = useState<number[]>([]);
-  const onInit = useCallback((emblaApi: EmblaCarouselType) => {
-    setScrollSnaps(emblaApi.scrollSnapList());
-  }, []);
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     onButtonSelect(emblaApi.selectedScrollSnap());
   }, []);
@@ -68,21 +64,19 @@ function MobileButtonGroup({
   useEffect(() => {
     if (!emblaApi) return;
 
-    onInit(emblaApi);
     onSelect(emblaApi);
     onScroll();
     emblaApi.on('scroll', () => {
       flushSync(() => onScroll());
     });
     emblaApi.on('reInit', onScroll);
-    emblaApi.on('reInit', onInit);
     emblaApi.on('reInit', onSelect);
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
   return (
     <div className={clsx('relative', className)}>
       <div className="w-full overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">
+        <div className="flex touch-pan-y gap-4">
           {services.map((service, index) => (
             <div
               key={`service-${service.name}-${index}`}

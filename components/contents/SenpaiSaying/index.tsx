@@ -61,7 +61,7 @@ export default function SenpaiSaying() {
 
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent max-sm:hidden"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l  from-[#F5F5F5] to-transparent max-sm:hidden"></div>
-          <div className="absolute inset-x-0 bottom-1/2 flex translate-y-1/2 justify-between sm:bottom-2 sm:right-20 sm:translate-y-0 sm:justify-end sm:gap-8">
+          <div className="pointer-events-none absolute inset-x-0 bottom-1/2 flex translate-y-1/2 justify-between sm:bottom-2 sm:right-20 sm:translate-y-0 sm:justify-end sm:gap-8 [&>button]:pointer-events-auto">
             <button
               className={clsx('scale-x-[-1] rounded-full p-3 sm:shadow-md', {
                 'text-[#83838] sm:bg-white sm:hover:bg-[#175DDC] sm:hover:text-white':
