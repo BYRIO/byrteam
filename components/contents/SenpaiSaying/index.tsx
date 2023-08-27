@@ -61,8 +61,32 @@ export default function SenpaiSaying() {
 
           <div className="max-sm:hidden pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent"></div>
           <div className="max-sm:hidden pointer-events-none absolute inset-y-0 right-0 w-1/3  bg-gradient-to-l from-[#F5F5F5] to-transparent"></div>
-
-          <div className="bottom-2 flex gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
+          <div className="sm:hidden bottom-2 flex gap-[19rem] justify-center -mt-[150px] mb-[100px]">
+            <button
+              className={clsx('scale-x-[-1] rounded-full p-3', {
+                'bg-opacity-0 text-[#83838]':
+                  !prevBtnDisabled,
+                'bg-opacity-0 cursor-not-allowed bg-zinc-300 text-zinc-400': prevBtnDisabled,
+              })}
+              onClick={scrollPrev}
+              disabled={prevBtnDisabled}
+            >
+              
+              <IconArrow />
+            </button>
+            <button
+              className={clsx('rounded-full p-3', {
+                'bg-opacity-0 text-[#83838]':
+                  !nextBtnDisabled,
+                'bg-opacity-0 bg-zinc-300 text-zinc-400': nextBtnDisabled,
+              })}
+              onClick={scrollNext}
+              disabled={nextBtnDisabled}
+            >
+              <IconArrow />
+            </button>
+          </div>
+          <div className="max-sm:hidden bottom-2 flex gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
             <button
               className={clsx('scale-x-[-1] rounded-full p-3 shadow-md', {
                 'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white':
