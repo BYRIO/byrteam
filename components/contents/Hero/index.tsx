@@ -123,7 +123,10 @@ export default function Hero() {
         <div className="max-w-[564px] flex-col gap-14 space-y-4 text-white">
           <div className="font-smiley text-[50px] leading-normal sm:text-[64px]">
             <p>We want you:</p>
-            <p>我们在这里，等风也等你</p>
+            <p className="flex flex-wrap [&>span]:shrink-0">
+              <span>我们在这里，</span>
+              <span>等风也等你</span>
+            </p>
           </div>
           <div className="front-medium space-y-4">
             <p>

@@ -3,13 +3,10 @@ import ServiceDekt from '@/assets/images/service/service-dekt.png';
 import ServiceBitwarden from '@/assets/images/service/service-bitwarden.png';
 import ServiceByrio from '@/assets/images/service/service-byrio.png';
 import ServiceGitlab from '@/assets/images/service/service-gitlab.png';
-import ServiceIPTV from '@/assets/images/service/service-iptv.png';
 import ServiceCodimd from '@/assets/images/service/service-codimd.png';
 import ServiceMirrors from '@/assets/images/service/service-mirrors.png';
 import ServiceOverleaf from '@/assets/images/service/service-overleaf.png';
-import ServiceByrbt from '@/assets/images/service/service-byrbt.png';
 
-import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 
 const services = [
@@ -57,12 +54,6 @@ const services = [
     slogan: <></>,
   },
   {
-    name: 'IPTV',
-    image: ServiceIPTV.src,
-    description: <></>,
-    slogan: <></>,
-  },
-  {
     name: 'Codimd',
     image: ServiceCodimd.src,
     description: <></>,
@@ -81,8 +72,8 @@ const services = [
     slogan: <></>,
   },
   {
-    name: '北邮人BT',
-    image: ServiceByrbt.src,
+    name: '研效体系',
+    image: ServiceOverleaf.src,
     description: <></>,
     slogan: <></>,
   },
