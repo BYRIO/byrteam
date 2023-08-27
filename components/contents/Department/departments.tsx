@@ -1,6 +1,11 @@
-import { ComponentProps, ReactNode } from 'react';
+import { ComponentProps, FC, ReactNode, SVGProps } from 'react';
 import IconArrowTR from '@/assets/images/departments/icon-arrow-tr.svg';
 import IconArrowR from '@/assets/images/departments/icon-arrow-r.svg';
+import IconTech from '@/assets/images/departments/icon-tech.svg';
+import IconMedia from '@/assets/images/departments/icon-media.svg';
+import IconProduct from '@/assets/images/departments/icon-product.svg';
+import IconDesign from '@/assets/images/departments/icon-design.svg';
+
 import clsx from 'clsx';
 
 function ChalkSpan({ content }: { content: string }) {
@@ -29,6 +34,7 @@ export function DepartmentCard({
   requirement,
   optionalRequirement,
   work,
+  icon: Icon,
 }: {
   name: string;
   description: ReactNode;
@@ -39,6 +45,7 @@ export function DepartmentCard({
     href: string;
     type?: 'primary' | 'secondary';
   }>;
+  icon: FC<SVGProps<SVGGElement>>;
 }) {
   return (
     <div className="flex text-[#333]">
@@ -149,6 +156,7 @@ export const departments = [
         type: 'secondary',
       },
     ],
+    icon: IconTech,
   },
   {
     name: '新媒体组',
@@ -206,6 +214,7 @@ export const departments = [
         title: 'BYRBT',
       },
     ],
+    icon: IconMedia,
   },
   {
     name: '产品运营组',
@@ -263,6 +272,7 @@ export const departments = [
         title: 'BYRBT',
       },
     ],
+    icon: IconProduct,
   },
   {
     name: '设计组',
@@ -320,5 +330,6 @@ export const departments = [
         title: 'BYRBT',
       },
     ],
+    icon: IconDesign,
   },
 ] as Array<ComponentProps<typeof DepartmentCard>>;

@@ -20,14 +20,16 @@ export default function Department() {
     >
       <ChalkTitle title="部门介绍" />
       <div className="mt-3 py-3 sm:py-9">
-        <div className="flex gap-3 rounded-2xl bg-white p-6">
-          <nav className="rounded-xl bg-[#F5F5F5] p-6">
-            <ul className="flex flex-col gap-6">
-              {departments.map((item, index) => (
+        <div className="flex flex-col gap-3 rounded-2xl bg-white p-1 sm:p-6 lg:flex-row">
+          <nav className="rounded-xl bg-[#F5F5F5] p-1 sm:p-3 lg:p-6">
+            <ul className="flex justify-between sm:gap-4 lg:flex-col lg:gap-6">
+              {departments.map(({ name, icon: Icon }, index) => (
                 <li
-                  key={`${item.name}-index`}
+                  key={`${name}-index`}
                   className={clsx(
-                    'relative flex cursor-pointer items-center justify-center px-3 py-14',
+                    'flex basis-1/4 cursor-pointer flex-col items-center justify-center sm:flex-row',
+                    'gap-1',
+                    'sm:gap-0',
                     {
                       'font-extrabold text-[#0067D1]': index === selected,
                       'text-[#A8A8A8] hover:text-zinc-500': index !== selected,
@@ -37,19 +39,41 @@ export default function Department() {
                     setSelected(index);
                   }}
                 >
-                  {index === selected && (
-                    <motion.div
-                      layoutId="selectBG"
-                      className="absolute inset-0 rounded-xl bg-white"
-                    ></motion.div>
-                  )}
-                  <span
+                  <div
                     className={clsx(
-                      'relative whitespace-nowrap text-2xl tracking-[3.6px] transition duration-500'
+                      'relative w-full self-stretch text-center',
+                      'sm:px-2 sm:py-6',
+                      'lg:px-3 lg:py-10'
                     )}
                   >
-                    {item.name}
-                  </span>
+                    {index === selected && (
+                      <motion.div
+                        layoutId="selectBG"
+                        className={clsx(
+                          'absolute inset-0 flex items-center justify-center rounded-xl bg-white'
+                        )}
+                      >
+                        <Icon
+                          className={clsx(
+                            'hidden',
+                            'sm:block sm:h-[64px]',
+                            'lg:h-[78px]',
+                            {
+                              'text-[#0067D] opacity-20': index === selected,
+                            }
+                          )}
+                        />
+                      </motion.div>
+                    )}
+                    <span
+                      className={clsx(
+                        'relative whitespace-nowrap text-sm transition duration-500 sm:text-xl sm:tracking-[3.6px] lg:text-2xl'
+                      )}
+                    >
+                      {name}
+                    </span>
+                  </div>
+                  <Icon className="block sm:hidden" width={24} height={24} />
                 </li>
               ))}
             </ul>
@@ -69,7 +93,7 @@ export default function Department() {
             </AnimatePresence>
             <div
               key={departments[selected].name + '-silk'}
-              className="absolute bottom-0 right-0 translate-x-20 translate-y-16"
+              className="pointer-events-none absolute bottom-0 right-0 translate-x-20 translate-y-16"
             >
               <AnimatedSilk />
             </div>
