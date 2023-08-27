@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function AnimatedSilk() {
   return (
-    <div className="max-sm:scale-[.4]">
+    <div className="max-sm:scale-75">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="261"
