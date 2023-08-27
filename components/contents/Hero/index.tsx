@@ -127,7 +127,7 @@ export default function Hero() {
           </div>
           <div className="front-medium space-y-4">
             <p>
-              北邮人团队成立于 2000 年初，现设技术、美工、产品运营和新媒体工作室
+              北邮人团队成立于 2000  年初，现设技术、美工、产品运营和新媒体工作室
               4 个大组，成员是北邮各学院各年级的在校生。
             </p>
             <p>

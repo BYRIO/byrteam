@@ -10,8 +10,19 @@ import services from './services';
 
 import Underline from '@/assets/images/service/underline.svg';
 
+import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 export default function Service() {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: false,
+      align: 'center',
+      dragFree: true,
+    }
+    // [Autoplay({ delay: 2500 })]
+  );
+  
   const [selected, setSelected] = useState(0);
+
   return (
     <motion.section
       className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}
@@ -22,28 +33,45 @@ export default function Service() {
     >
       <ChalkTitle title="我们的产品" />
       <div className="mt-3">
-        <div className="flex flex-col gap-6">
-          <div className="flex items-center justify-around">
-            {services.map((service, index) => (
-              <div
-                key={`service-${service.name}-${index}`}
-                className="relative cursor-pointer"
-                role="button"
-                onClick={() => {
-                  setSelected(index);
-                }}
-                title={service.name}
-              >
-                <motion.img
-                  src={service.image}
-                  layout
-                  width={index === selected ? 100 : 54}
-                  alt={service.name}
-                />
-                {index === selected && <AnimatedCircle />}
-              </div>
-            ))}
+        <div className="flex flex-col gap-0 sm:gap-8">
+        <div className="relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex touch-pan-x gap-3  sm:ml-0 sm:gap-12 min-w-[1000px] -ml-[100px]">
+              {services.map((service, index) => (
+                <div
+                  key={`service-${service.name}-${index}`}
+                  className="relative cursor-pointer"
+                  role="button"
+                  onClick={() => {
+                    setSelected(index);
+                  }}
+                  title={service.name}
+                >
+                  <div className='max-sm:hidden'>
+                    <motion.img
+                      src={service.image}
+                      layout
+                      width={index === selected ? 100 : 54}
+                      alt={service.name}
+                    />
+                  </div>
+                  <div className='sm:hidden'>
+                    <motion.img
+                      src={service.image}
+                      layout
+                      width={index === selected ? 75 : 54}
+                      alt={service.name}
+                    />
+                  </div>
+                  {index === selected && <AnimatedCircle />}
+                </div>
+              ))}
+          
+            </div>
           </div>
+        </div>
+
+          
           <div className="rounded-[18px] bg-white px-6 py-4">
             <AnimatePresence>
               <motion.div className="flex flex-col gap-2 self-stretch">

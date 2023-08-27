@@ -18,13 +18,14 @@ const icon = {
 
 export default function AnimatedCircle() {
   return (
+    
     <motion.svg
       width="130"
       height="120"
       viewBox="0 0 117 104"
       xmlns="http://www.w3.org/2000/svg"
       className={clsx(
-        'absolute left-[calc(50%+6px)] top-[calc(50%+8px)] -translate-x-1/2 -translate-y-1/2'
+        'absolute left-[calc(50%+6px)] top-[calc(50%+8px)] -translate-x-1/2 -translate-y-1/2 scale-75 sm:scale-100'
       )}
       fill="none"
     >
@@ -42,5 +43,6 @@ export default function AnimatedCircle() {
         fill="none"
       />
     </motion.svg>
+  
   );
 }

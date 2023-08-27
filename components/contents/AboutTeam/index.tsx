@@ -22,7 +22,7 @@ export default function AboutTeam() {
         <p>
           {' '}
           北邮人团队成立于
-          <b className="text-lg font-black italic text-[#175DDC]">2000</b>
+          <b className="text-lg font-black italic text-[#175DDC]">2000 </b>
           年初，由北邮各年级各学院的在校生组成。成立至今，我们一直致力于服务北邮人，为大家提供便利。
         </p>
         <p>
