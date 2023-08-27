@@ -92,7 +92,11 @@ export default function Department() {
             </AnimatePresence>
             <div
               key={departments[selected].name + '-silk'}
-              className="pointer-events-none absolute bottom-0 right-0 translate-x-20 translate-y-16"
+              className={clsx(
+                'pointer-events-none absolute',
+                'sm:bottom-0 sm:right-0 sm:translate-x-20 sm:translate-y-16 sm:scale-100',
+                '-right-32 bottom-full -scale-x-[1]'
+              )}
             >
               <AnimatedSilk />
             </div>
