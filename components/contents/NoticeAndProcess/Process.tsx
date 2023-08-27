@@ -5,10 +5,8 @@ import { motion } from 'framer-motion';
 export default function Process() {
   return (
     <motion.div layout className="mx-auto my-6 max-w-[1440px]">
-      <ProcessDesktop className="w-full max-sm:hidden" />
-      <div className="-mt-[80px] -mb-[100px] flex justify-center">
-        <ProcessMobile className="w-[85%] sm:hidden" />
-      </div>
+      <ProcessDesktop className="h-fit w-full max-md:hidden" />
+      <ProcessMobile className="h-fit w-full px-4 md:hidden" />
     </motion.div>
   );
 }
