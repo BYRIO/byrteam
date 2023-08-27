@@ -54,44 +54,20 @@ export default function SenpaiSaying() {
       <div className="mt-3 py-3 sm:py-9">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex touch-pan-y gap-6 ml-32 sm:ml-0 sm:gap-12">
+            <div className="ml-32 flex touch-pan-y gap-6 sm:ml-0 sm:gap-12">
               <Cards />
             </div>
           </div>
 
-          <div className="max-sm:hidden pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent"></div>
-          <div className="max-sm:hidden pointer-events-none absolute inset-y-0 right-0 w-1/3  bg-gradient-to-l from-[#F5F5F5] to-transparent"></div>
-          <div className="sm:hidden bottom-2 flex gap-[19rem] justify-center -mt-[150px] mb-[100px]">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#F5F5F5] to-transparent max-sm:hidden"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l  from-[#F5F5F5] to-transparent max-sm:hidden"></div>
+          <div className="absolute inset-x-0 bottom-1/2 flex translate-y-1/2 justify-between sm:bottom-2 sm:right-20 sm:translate-y-0 sm:justify-end sm:gap-8">
             <button
-              className={clsx('scale-x-[-1] rounded-full p-3', {
-                'bg-opacity-0 text-[#83838]':
+              className={clsx('scale-x-[-1] rounded-full p-3 sm:shadow-md', {
+                'text-[#83838] sm:bg-white sm:hover:bg-[#175DDC] sm:hover:text-white':
                   !prevBtnDisabled,
-                'bg-opacity-0 cursor-not-allowed bg-zinc-300 text-zinc-400': prevBtnDisabled,
-              })}
-              onClick={scrollPrev}
-              disabled={prevBtnDisabled}
-            >
-              
-              <IconArrow />
-            </button>
-            <button
-              className={clsx('rounded-full p-3', {
-                'bg-opacity-0 text-[#83838]':
-                  !nextBtnDisabled,
-                'bg-opacity-0 bg-zinc-300 text-zinc-400': nextBtnDisabled,
-              })}
-              onClick={scrollNext}
-              disabled={nextBtnDisabled}
-            >
-              <IconArrow />
-            </button>
-          </div>
-          <div className="max-sm:hidden bottom-2 flex gap-[10rem] max-sm:justify-center sm:absolute sm:right-20 sm:gap-8">
-            <button
-              className={clsx('scale-x-[-1] rounded-full p-3 shadow-md', {
-                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white':
-                  !prevBtnDisabled,
-                'cursor-not-allowed bg-zinc-300 text-zinc-400': prevBtnDisabled,
+                'cursor-not-allowed text-zinc-400 sm:bg-zinc-300':
+                  prevBtnDisabled,
               })}
               onClick={scrollPrev}
               disabled={prevBtnDisabled}
@@ -99,10 +75,11 @@ export default function SenpaiSaying() {
               <IconArrow />
             </button>
             <button
-              className={clsx('rounded-full p-3 shadow-md', {
-                'bg-white text-[#838383] hover:bg-[#175DDC] hover:text-white':
+              className={clsx('rounded-full p-3 sm:shadow-md', {
+                'text-[#83838] sm:bg-white sm:text-[#838383] sm:hover:bg-[#175DDC] sm:hover:text-white':
                   !nextBtnDisabled,
-                'cursor-not-allowed bg-zinc-300 text-zinc-400': nextBtnDisabled,
+                'cursor-not-allowed text-zinc-400 sm:bg-zinc-300':
+                  nextBtnDisabled,
               })}
               onClick={scrollNext}
               disabled={nextBtnDisabled}

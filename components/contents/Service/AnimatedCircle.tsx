@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-import styles from './style.module.scss';
-
 const icon = {
   hidden: {
     opacity: 0,
@@ -18,7 +16,6 @@ const icon = {
 
 export default function AnimatedCircle() {
   return (
-    
     <motion.svg
       width="130"
       height="120"
@@ -43,6 +40,5 @@ export default function AnimatedCircle() {
         fill="none"
       />
     </motion.svg>
-  
   );
 }
