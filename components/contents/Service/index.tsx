@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -9,20 +9,138 @@ import AnimatedCircle from './AnimatedCircle';
 import services from './services';
 
 import Underline from '@/assets/images/service/underline.svg';
-
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
-export default function Service() {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: false,
-      align: 'center',
-      dragFree: true,
-    }
-    // [Autoplay({ delay: 2500 })]
-  );
-  
-  const [selected, setSelected] = useState(0);
+import { flushSync } from 'react-dom';
 
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max);
+const TWEEN_FACTOR = 3;
+
+type ButtonGroup = {
+  selected: number;
+  className: string;
+  onSelect: (index: number) => void;
+};
+
+// ref: https://www.embla-carousel.com/examples/predefined/#scale
+function MobileButtonGroup({
+  selected,
+  onSelect: onButtonSelect,
+  className,
+}: ButtonGroup) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    align: 'center',
+    containScroll: false,
+  });
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [tweenValues, setTweenValues] = useState<number[]>([]);
+  const onInit = useCallback((emblaApi: EmblaCarouselType) => {
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, []);
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+    onButtonSelect(emblaApi.selectedScrollSnap());
+  }, []);
+  const onScroll = useCallback(() => {
+    if (!emblaApi) return;
+
+    const engine = emblaApi.internalEngine();
+    const scrollProgress = emblaApi.scrollProgress();
+
+    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
+      let diffToTarget = scrollSnap - scrollProgress;
+
+      if (engine.options.loop) {
+        engine.slideLooper.loopPoints.forEach((loopItem) => {
+          const target = loopItem.target();
+          if (index === loopItem.index && target !== 0) {
+            const sign = Math.sign(target);
+            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
+            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
+          }
+        });
+      }
+      const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR);
+      return numberWithinRange(tweenValue, 0, 1);
+    });
+    setTweenValues(styles);
+  }, [emblaApi, setTweenValues]);
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onInit(emblaApi);
+    onSelect(emblaApi);
+    onScroll();
+    emblaApi.on('scroll', () => {
+      flushSync(() => onScroll());
+    });
+    emblaApi.on('reInit', onScroll);
+    emblaApi.on('reInit', onInit);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
+  }, [emblaApi, onSelect]);
+  return (
+    <div className={clsx('relative', className)}>
+      <div className="w-full overflow-hidden" ref={emblaRef}>
+        <div className="flex touch-pan-y">
+          {services.map((service, index) => (
+            <div
+              key={`service-${service.name}-${index}`}
+              className="relative flex min-w-0 flex-[0_0_20%] items-center justify-center py-3"
+            >
+              <div
+                className="relative h-fit w-fit cursor-pointer"
+                role="button"
+                onClick={() => {
+                  onButtonSelect(index);
+                  emblaApi?.scrollTo(index);
+                }}
+                title={service.name}
+                style={{
+                  ...(tweenValues.length && {
+                    transform: `scale(${tweenValues[index]})`,
+                  }),
+                }}
+              >
+                <img src={service.image} width={80} alt={service.name} />
+                {index === selected && <AnimatedCircle />}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DesktopButtonGroup({ selected, onSelect, className }: ButtonGroup) {
+  return (
+    <div className={clsx('flex items-center justify-around', className)}>
+      {services.map((service, index) => (
+        <div
+          key={`service-${service.name}-${index}`}
+          className="relative cursor-pointer"
+          role="button"
+          onClick={() => {
+            onSelect(index);
+          }}
+          title={service.name}
+        >
+          <motion.img
+            src={service.image}
+            layout
+            width={index === selected ? 100 : 54}
+            alt={service.name}
+          />
+          {index === selected && <AnimatedCircle />}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default function Service() {
+  const [selected, setSelected] = useState(0);
   return (
     <motion.section
       className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}
@@ -33,45 +151,17 @@ export default function Service() {
     >
       <ChalkTitle title="我们的产品" />
       <div className="mt-3">
-        <div className="flex flex-col gap-0 sm:gap-8">
-        <div className="relative">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex touch-pan-x gap-3  sm:ml-0 sm:gap-12 min-w-[1000px] -ml-[100px]">
-              {services.map((service, index) => (
-                <div
-                  key={`service-${service.name}-${index}`}
-                  className="relative cursor-pointer"
-                  role="button"
-                  onClick={() => {
-                    setSelected(index);
-                  }}
-                  title={service.name}
-                >
-                  <div className='max-sm:hidden'>
-                    <motion.img
-                      src={service.image}
-                      layout
-                      width={index === selected ? 100 : 54}
-                      alt={service.name}
-                    />
-                  </div>
-                  <div className='sm:hidden'>
-                    <motion.img
-                      src={service.image}
-                      layout
-                      width={index === selected ? 75 : 54}
-                      alt={service.name}
-                    />
-                  </div>
-                  {index === selected && <AnimatedCircle />}
-                </div>
-              ))}
-          
-            </div>
-          </div>
-        </div>
-
-          
+        <div className="flex flex-col gap-6">
+          <DesktopButtonGroup
+            selected={selected}
+            onSelect={setSelected}
+            className="hidden lg:flex"
+          />
+          <MobileButtonGroup
+            selected={selected}
+            onSelect={setSelected}
+            className="flex items-center lg:hidden"
+          />
           <div className="rounded-[18px] bg-white px-6 py-4">
             <AnimatePresence>
               <motion.div className="flex flex-col gap-2 self-stretch">
