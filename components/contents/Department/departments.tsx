@@ -10,7 +10,7 @@ import clsx from 'clsx';
 
 function ChalkSpan({ content }: { content: string }) {
   return (
-    <div className="max-sm:scale-75 max-sm:-ml-3 relative block w-fit">
+    <div className="relative block w-fit max-sm:-ml-3 max-sm:scale-75">
       <div
         className={clsx(
           'absolute bottom-0 h-3/5 w-full',
@@ -75,14 +75,14 @@ export function DepartmentCard({
 }) {
   return (
     <div className="flex h-full flex-col gap-1 text-[#333] sm:flex-row sm:gap-0">
-      <div className="max-sm:mt-2 basis-3/5 px-3 text-base leading-[180%] sm:text-xl [&>p]:indent-8">
+      <div className="basis-3/5 px-3 text-base leading-[180%] max-sm:mt-2 sm:text-xl [&>p]:indent-8">
         {description}
       </div>
-      <hr className='mt-2 mb-2 sm:hidden'></hr>
+      <hr className="mb-2 mt-2 sm:hidden"></hr>
       <div className="w-px self-stretch bg-black/20"></div>
-      <div className="flex flex-row basis-2/5 sm:gap-6 px-3 max-sm:space-x-6 sm:flex-col">
-        <div className='space-y-4 min-w-[50%]'>
-          <div className='whitespace-nowrap'>
+      <div className="flex basis-2/5 flex-row px-3 max-sm:space-x-6 sm:flex-col sm:gap-6">
+        <div className="min-w-[50%] space-y-4">
+          <div className="whitespace-nowrap">
             <ChalkSpan content="岗位要求" />
           </div>
           <RequirementGroup title="基础要求：" requirement={requirement} />
@@ -91,10 +91,10 @@ export function DepartmentCard({
             requirement={optionalRequirement}
           />
         </div>
-        
-        <div className='sm:space-y-4'>
+
+        <div className="sm:space-y-4">
           <ChalkSpan content="过往作品" />
-          <div className="max-sm:-mt-5 max-sm:-ml-5 max-sm:scale-75 flex flex-wrap items-center [&>a]:shrink-0">
+          <div className="flex flex-wrap items-center max-sm:-ml-5 max-sm:-mt-5 max-sm:scale-75 [&>a]:shrink-0">
             {work.map(({ href = '', type = 'primary', title }, index) => (
               <a
                 key={href + index}
@@ -105,13 +105,15 @@ export function DepartmentCard({
                     'bg-[#338EEC] text-white': type === 'primary',
                   }
                 )}
+                href={href}
+                rel="noreferrer noopener"
+                target="_blank"
               >
                 {title}
               </a>
             ))}
           </div>
         </div>
-        
       </div>
     </div>
   );
@@ -122,7 +124,7 @@ export const departments = [
     name: '技术组',
     description: (
       <>
-        <div className="h-52 sm:h-72 w-full rounded-lg bg-cyan-400 mb-2"></div>
+        <div className="mb-2 h-52 w-full rounded-lg bg-cyan-400 sm:h-72"></div>
         <p>这里汇集了研发、技术、运维、设计等各路大佬，是BYR坚强的技术后盾。</p>
         <p>
           我们负责技术项目研发，对团队现有产品进行维护和更新、保证系统正常运行。为学校活动、师生便利提供技术支持，构建学校内开源共享氛围，是每个技术人员的职责与使命。
@@ -149,12 +151,15 @@ export const departments = [
           </RequirementWrapper>
         ),
         type: 'secondary',
+        href: 'https://byrio.org/',
       },
       {
         title: 'Overleaf',
+        href: 'https://overleaf.byrio.work/',
       },
       {
         title: '第二课堂小程序',
+        href: 'https://dekt.bupt.edu.cn/qr?f=mp',
       },
       {
         title: (
@@ -166,10 +171,7 @@ export const departments = [
           </RequirementWrapper>
         ),
         type: 'secondary',
-      },
-      {
-        title: 'BYRBT',
-        type: 'secondary',
+        href: 'https://bitwarden.byrio.work/',
       },
     ],
     icon: IconTech,
@@ -225,9 +227,6 @@ export const departments = [
             </>
           </RequirementWrapper>
         ),
-      },
-      {
-        title: 'BYRBT',
       },
     ],
     icon: IconMedia,
