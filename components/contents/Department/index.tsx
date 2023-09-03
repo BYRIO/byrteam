@@ -90,15 +90,17 @@ export default function Department() {
                 <DepartmentCard {...departments[selected]} />
               </motion.div>
             </AnimatePresence>
-            <div
-              key={departments[selected].name + '-silk'}
-              className={clsx(
-                'pointer-events-none absolute',
-                'bottom-0 right-0 translate-x-20 translate-y-16 scale-100'
-              )}
-            >
-              <AnimatedSilk />
-            </div>
+            {selected !== 3 && (
+              <div
+                key={departments[selected].name + '-silk'}
+                className={clsx(
+                  'pointer-events-none absolute',
+                  'bottom-0 right-0 translate-x-20 translate-y-16 scale-100'
+                )}
+              >
+                <AnimatedSilk />
+              </div>
+            )}
           </main>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import ProcessDesktop from '@/assets/images/senpai-saying/process-desktop.svg';
-import ProcessMobile from '@/assets/images/senpai-saying/process-mobile.svg';
+import ProcessDesktop from '@/assets/images/process/process-desktop.svg';
+import ProcessMobile from '@/assets/images/process/process-mobile.svg';
 import { motion } from 'framer-motion';
 
 export default function Process() {

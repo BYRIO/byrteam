@@ -9,6 +9,7 @@ import AnimatedCircle from './AnimatedCircle';
 import services from './services';
 
 import Underline from '@/assets/images/service/underline.svg';
+import IconArrowTR from '@/assets/images/departments/icon-arrow-tr.svg';
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 import { flushSync } from 'react-dom';
 
@@ -80,7 +81,7 @@ function MobileButtonGroup({
           {services.map((service, index) => (
             <div
               key={`service-${service.name}-${index}`}
-              className="relative flex min-w-0 flex-[0_0_20%] items-center justify-center py-3"
+              className="relative flex min-w-0 flex-[0_0_20%] items-center justify-center py-4 pt-3"
             >
               <div
                 className="relative h-fit w-fit cursor-pointer"
@@ -158,16 +159,26 @@ export default function Service() {
           />
           <div className="rounded-[18px] bg-white px-6 py-4">
             <AnimatePresence>
-              <motion.div className="flex flex-col gap-2 self-stretch">
-                <div className="flex items-center justify-between">
-                  <motion.h3 className="inline-flex flex-col items-center text-2xl tracking-[2.88px]">
+              <motion.div className="flex flex-col gap-2">
+                <div className="flex justify-between">
+                  <motion.h3 className="inline-flex w-fit flex-col items-center text-2xl">
                     {services[selected].name}
                     <Underline />
                   </motion.h3>
-                  <motion.span className="inline-block text-[#0067D1] opacity-80">
-                    {services[selected].slogan}
-                  </motion.span>
+                  {services[selected].url && (
+                    <a
+                      className="cursor-pointer p-2 text-[#0067D1]"
+                      href={services[selected].url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <IconArrowTR />
+                    </a>
+                  )}
                 </div>
+                <motion.div className="text-[#0067D1] opacity-80">
+                  {services[selected].slogan}
+                </motion.div>
                 <motion.article className="text-lg leading-[180%] [&>p]:indent-8">
                   {services[selected].description}
                 </motion.article>

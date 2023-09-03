@@ -28,53 +28,99 @@ const services = [
       </>
     ),
     slogan: '“北邮人共同的精神原乡 对一代又一代的北邮人而言 既是逗号 也是起点”',
+    url: 'https://bbs.byr.cn',
   },
   {
     name: '北邮第二课堂',
     image: ServiceDekt.src,
     description: <></>,
     slogan: <></>,
+    url: 'https://dekt.bupt.edu.cn/qr?f=mp',
   },
   {
     name: 'Bitwarden',
     image: ServiceBitwarden.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          Bitwarden是一款自由且开源的密码管理服务，用户可在加密的保管库中存储敏感信息。Bitwarden平台提供有多种客户端应用程序，包括网页用户界面、桌面应用，浏览器扩展、移动应用以及命令行界面。Bitwarden提供云端托管服务，并支持自行部署解决方案。
+        </p>
+      </>
+    ),
+    slogan: <>“自从用了bitwarden，我再也不需要记密码了！”</>,
+    url: 'https://bitwarden.byrio.work',
   },
   {
     name: 'Byrio社区',
     image: ServiceByrio.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          BYRIOSC是一个围绕互联网技术与开源文化，主题涵盖科技、开发、设计、媒体，由开发者和创意工作者组成的线上交流、线下活动的学生社区。我们力求吸引富有热情和兴趣的开发者、创造者们加入，凝聚北邮各大学生技术组织的力量，建设成为最富有活力和创造力的学生技术社区。
+        </p>
+      </>
+    ),
+    slogan: <>“FOR HACKER, GEEK & CREATOR LIKE YOU”</>,
+    url: 'https://byrio.org',
   },
   {
     name: 'Gitlab',
     image: ServiceGitlab.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          GitLab是由GitLab公司开发的、基于Git的集成软件开发平台。另外，GitLab且具有wiki以及在线编辑、issue跟踪功能、CI/CD等功能。
+        </p>
+        <p>校内搭建的Gitlab服务...</p>
+      </>
+    ),
+    slogan: <>“CI/CD真是太好用了.jpg”</>,
+    url: 'https://git.byr.moe',
   },
   {
     name: 'Codimd',
     image: ServiceCodimd.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          CodiMD是一个开源的实时协作markdown笔记本。它可以让你在网页上编辑markdown笔记，并且可以实时预览。你可以邀请其他人来协作编辑笔记，也可以将笔记分享给其他人。
+        </p>
+      </>
+    ),
+    slogan: <>“Markdown了解一下！”</>,
+    url: 'https://md.byr.moe',
   },
   {
-    name: '北邮镜像源',
+    name: '开源镜像服务',
     image: ServiceMirrors.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          当你还在为pip install, go add, cargo build, npm
+          install发愁的时候，可以...
+        </p>
+        <p>如果你需要linux相关的镜像源还可以...</p>
+      </>
+    ),
+    slogan: <>“一个字：快！”</>,
   },
   {
     name: 'Overleaf',
     image: ServiceOverleaf.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          Overleaf是一个云端协作式LaTeX编辑器，可用于编写和发布论文。这一编辑器与很多科学杂志出版商有合作关系，不但提供官方期刊的LaTeX模板，还能直接将文件提交至这些出版社。
+        </p>
+      </>
+    ),
+    slogan: <>“科研必备”</>,
+    url: 'https://overleaf.byrio.work/',
   },
   {
     name: '研效体系',
     image: ServiceOverleaf.src,
-    description: <></>,
+    description: <>我们拥有比肩大厂的研效体系，blazing fast的CI/CD流程，</>,
     slogan: <></>,
   },
 ] as Array<{
@@ -82,6 +128,7 @@ const services = [
   image: string;
   description: ReactNode;
   slogan: ReactNode;
+  url?: string;
 }>;
 
 export default services;
