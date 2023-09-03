@@ -6,6 +6,7 @@ import ServiceGitlab from '@/assets/images/service/service-gitlab.png';
 import ServiceCodimd from '@/assets/images/service/service-codimd.png';
 import ServiceMirrors from '@/assets/images/service/service-mirrors.png';
 import ServiceOverleaf from '@/assets/images/service/service-overleaf.png';
+import ServiceEfficiency from '@/assets/images/service/service-efficiency.png';
 
 import { ReactNode } from 'react';
 
@@ -33,8 +34,15 @@ const services = [
   {
     name: '北邮第二课堂',
     image: ServiceDekt.src,
-    description: <></>,
-    slogan: <></>,
+    description: (
+      <>
+        <p>
+          北邮第二课堂主要通过活动申请、管理、发布、报名、签到、评价等功能记录学生在第一课堂之外的活动，对学生综合素质进行评定，生成用户画像帮助同学们正确了解自身优势、弥补自身不足，并为学校决策提供科学依据。
+        </p>
+        <p></p>
+      </>
+    ),
+    slogan: <>“我们致力于保障师生参加活动的体验”</>,
     url: 'https://dekt.bupt.edu.cn/qr?f=mp',
   },
   {
@@ -71,7 +79,6 @@ const services = [
         <p>
           GitLab是由GitLab公司开发的、基于Git的集成软件开发平台。另外，GitLab且具有wiki以及在线编辑、issue跟踪功能、CI/CD等功能。
         </p>
-        <p>校内搭建的Gitlab服务...</p>
       </>
     ),
     slogan: <>“CI/CD真是太好用了.jpg”</>,
@@ -97,9 +104,20 @@ const services = [
       <>
         <p>
           当你还在为pip install, go add, cargo build, npm
-          install发愁的时候，可以...
+          install发愁的时候，可以使用这个。
+          <a className="ml-4 italic underline" href="https://mirrors.byr.ink">
+            link
+          </a>
         </p>
-        <p>如果你需要linux相关的镜像源还可以...</p>
+        <p>
+          如果你需要linux相关的镜像源还可以使用这个。
+          <a
+            className="ml-4 italic underline"
+            href="https://mirrors.bupt.edu.cn"
+          >
+            link
+          </a>
+        </p>
       </>
     ),
     slogan: <>“一个字：快！”</>,
@@ -119,9 +137,14 @@ const services = [
   },
   {
     name: '研效体系',
-    image: ServiceOverleaf.src,
-    description: <>我们拥有比肩大厂的研效体系，blazing fast的CI/CD流程，</>,
-    slogan: <></>,
+    image: ServiceEfficiency.src,
+    description: (
+      <>
+        我们拥有比肩大厂的研效体系，blazing
+        fast的CI/CD流程，超丝滑的docker部署方案。
+      </>
+    ),
+    slogan: <>“自动化部署什么的真是太酷了！”</>,
   },
 ] as Array<{
   name: string;
