@@ -27,22 +27,22 @@ export function SenpaiFemale2() {
 }
 export function SenpaiFemale3() {
   return (
-    <div className='my-8'>
+    <div className="my-8">
       <SenpaiFemale3Icon width={275} />
     </div>
-  )
+  );
 }
 export function SenpaiFemale4() {
   return (
-    <div className='my-8'>
+    <div>
       <SenpaiFemale4Icon width={275} />
     </div>
-  )
+  );
 }
 export function SenpaiFemale5() {
   return (
-    <div className='my-8'>
+    <div className="my-8">
       <SenpaiFemale5Icon width={275} />
     </div>
-  )
+  );
 }
