@@ -51,7 +51,7 @@ export default function SenpaiSaying() {
         <ChalkTitle title="学长学姐说" />
       </div>
 
-      <div className="mt-3 py-3 sm:py-9">
+      <div className="mt-3 py-3 sm:py-9 h-fit">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="ml-32 flex touch-pan-y gap-6 sm:ml-0 sm:gap-12">
