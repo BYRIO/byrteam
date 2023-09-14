@@ -10,6 +10,10 @@ const SmileySans = localFont({
   src: './fonts/SmileySans.woff2',
   variable: '--font-smiley',
 });
+const TrueLogoG = localFont({
+  src: './fonts/TrueLogoG.woff2',
+  variable: '--font-truelogog',
+});
 
 export const metadata: Metadata = {
   title: '北邮人团队',
@@ -23,7 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={clsx(SmileySans.variable, 'relative overflow-x-hidden')}>
+      <body
+        className={clsx(
+          SmileySans.variable,
+          TrueLogoG.variable,
+          'relative overflow-x-hidden'
+        )}
+      >
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />

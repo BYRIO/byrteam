@@ -13,7 +13,7 @@ import TechDektWebImg from '@/assets/images/departments/tech-dekt-web.jpg';
 import clsx from 'clsx';
 
 import MediaDescription from './MediaDescription';
-import DesignDescription from './DesignDescription';
+import NewDesignDescription from './NewDesignDescription';
 
 export function ChalkSpan({ content }: { content: string }) {
   return (
@@ -84,7 +84,7 @@ export function DepartmentCard({
     return <MediaDescription />;
   }
   if (name === '设计组') {
-    return <DesignDescription />;
+    return <NewDesignDescription />;
   }
   return (
     <div className="flex h-full flex-col gap-1 text-[#333] sm:flex-row sm:gap-0">

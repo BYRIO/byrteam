@@ -1,3 +1,4 @@
 {
-  "outputDirectory": "out"
+  "outputDirectory": "out",
+  "rewrites": [{ "source": "/(.*)", "destination": "/404.html" }]
 }

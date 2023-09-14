@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         smiley: ['var(--font-smiley)'],
+        truelogog: ['var(--font-truelogog)'],
       },
     },
   },
