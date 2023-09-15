@@ -14,6 +14,8 @@ module.exports = {
       },
       fontFamily: {
         smiley: ['var(--font-smiley)'],
+        dfphei: ['var(--font-dfphei)'],
+        'poppins-800': ['var(--font-poppins-800)'],
       },
     },
   },
