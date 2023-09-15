@@ -56,7 +56,7 @@ export default function Header() {
     return () => document.removeEventListener('scroll', onScroll);
   }, []);
   return (
-    <header className="fixed top-0 z-30 w-full">
+    <header className="sticky top-0 z-30 -mb-[84px] w-full">
       <div
         className={clsx(
           'absolute top-0 z-[-1] h-full w-full transition-colors duration-500',

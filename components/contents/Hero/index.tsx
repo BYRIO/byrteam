@@ -56,12 +56,12 @@ function HeroBG() {
         <div className="flex touch-pan-y">
           <EmblaCarouselItemWrapper>
             <Image
-              className="h-screen select-none object-cover"
+              className="h-screen select-none  object-cover sm:min-h-[700px]"
               src={HeroBG1}
               alt=""
             />
           </EmblaCarouselItemWrapper>
-          {[
+          {/* {[
             'bg-red-200',
             'bg-orange-300',
             'bg-amber-200',
@@ -73,11 +73,11 @@ function HeroBG() {
                 className={clsx(bg, 'h-screen object-cover sm:min-h-[700px]')}
               ></div>
             </EmblaCarouselItemWrapper>
-          ))}
+          ))} */}
         </div>
       </div>
       {/* indicator */}
-      <div
+      {/* <div
         className={clsx(
           'absolute bottom-[55px] hidden gap-1 p-[10px] sm:flex',
           'right-1/2 translate-x-1/2',
@@ -103,7 +103,7 @@ function HeroBG() {
             ></div>
           </button>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -76,6 +76,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
+  tailwindcss-gradient:
+    specifier: ^1.0.1
+    version: registry.npmmirror.com/tailwindcss-gradient@1.0.1(tailwindcss@3.3.3)
 
 packages:
 
@@ -4556,6 +4559,17 @@ packages:
     name: source-map-js
     version: 1.0.2
     engines: {node: '>=0.10.0'}
+
+  registry.npmmirror.com/tailwindcss-gradient@1.0.1(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-wntnHroiThDogu2ly6eRynURgKHEOy2xzEriAmZCVtTLxHfchnbdi6Hx2fAXrIYVHStVn+Au35cuXuZKeRZcwg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tailwindcss-gradient/-/tailwindcss-gradient-1.0.1.tgz}
+    id: registry.npmmirror.com/tailwindcss-gradient/1.0.1
+    name: tailwindcss-gradient
+    version: 1.0.1
+    peerDependencies:
+      tailwindcss: 3.x
+    dependencies:
+      tailwindcss: 3.3.3
+    dev: true
 
   registry.npmmirror.com/to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/to-regex-range/-/to-regex-range-5.0.1.tgz}

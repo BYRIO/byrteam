@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import clsx from 'clsx';
+import Banner from '@/components/Banner.tsx';
 
 const SmileySans = localFont({
   src: './fonts/SmileySans.woff2',
@@ -22,8 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en">
       <body className={clsx(SmileySans.variable, 'relative overflow-x-hidden')}>
+        <Banner />
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />
