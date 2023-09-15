@@ -9,7 +9,15 @@ export default function NewDesignDescription() {
         'text-[#0067D1]': true,
       })}
     >
-      <div className="font-poppins-800 absolute inset-0 -mr-1 flex flex-col justify-between text-right text-9xl italic opacity-20">
+      <div
+        className={clsx(
+          'font-poppins-800 absolute inset-0 -mr-1 flex flex-col justify-center text-right italic opacity-20',
+          'gap-5 text-6xl',
+          'sm:gap-5 sm:text-7xl',
+          'md:gap-5 md:text-8xl',
+          'lg:justify-between lg:text-9xl'
+        )}
+      >
         <div>GRAPHIC</div>
         <div>PRODUCT</div>
         <div>INTERACTION</div>
@@ -18,16 +26,30 @@ export default function NewDesignDescription() {
       <article
         className={clsx(
           'relative h-full',
-          '[&>section>div]:w-fit [&>section]:w-fit',
-          'flex flex-col justify-between'
+          'flex flex-col justify-between',
+          'gap-8',
+          'sm:gap-11',
+          'md:gap-16'
         )}
       >
         <section>
-          <div className="flex w-fit items-center gap-[10px] border-[2px] border-[#0067D1] bg-white/40 p-[10px]">
+          <div
+            className={clsx(
+              'flex flex-wrap items-center gap-1 border-[2px] border-[#0067D1] bg-white/40 p-[10px] md:gap-[10px]',
+              'w-[250px] justify-center',
+              'sm:w-fit'
+            )}
+          >
             <DesignTitle />
             <div className="flex flex-col items-center gap-[10px] px-[10px]">
               <IconSaturn />
-              <span className="font-dfphei text-4xl tracking-[5.4px]">
+              <span
+                className={clsx(
+                  'font-dfphei',
+                  'text-xl tracking-[3.25px]',
+                  'sm:text-4xl sm:tracking-[5.4px]'
+                )}
+              >
                 design=__
               </span>
             </div>
@@ -41,7 +63,7 @@ export default function NewDesignDescription() {
             表达出来的过程”
           </div>
         </section>
-        <section className="mr-24 self-end">
+        <section className={clsx('self-end', 'sm:mr-24')}>
           <div className="w-fit border-[2px] border-[#0067D1] bg-white/40 px-[9px] text-right text-[32px] leading-[125.5%] tracking-[4px]">
             <p>#坛服</p>
             <p>#文创</p>
