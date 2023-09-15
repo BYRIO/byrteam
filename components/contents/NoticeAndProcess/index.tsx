@@ -17,14 +17,14 @@ export default function NoticeAndProcess() {
         <ChalkTitle title="招新公告与招新流程" />
       </div>
       <LayoutGroup>
-        <motion.div
+        {/* <motion.div
           layout
           className={clsx(
             'mx-auto mt-3 max-w-[1280px] px-4 py-3 sm:px-10 sm:py-9'
           )}
         >
           <Notice />
-        </motion.div>
+        </motion.div> */}
         <Process />
       </LayoutGroup>
     </motion.section>
