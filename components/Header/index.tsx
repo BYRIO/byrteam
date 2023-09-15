@@ -56,7 +56,7 @@ export default function Header() {
     return () => document.removeEventListener('scroll', onScroll);
   }, []);
   return (
-    <header className="sticky top-0 z-30 -mb-[84px] w-full">
+    <header className="sticky top-0 z-30 -mb-[64px] w-full">
       <div
         className={clsx(
           'absolute top-0 z-[-1] h-full w-full transition-colors duration-500',
@@ -71,11 +71,11 @@ export default function Header() {
             'flex items-center justify-between transition duration-500',
             {
               'text-white': !isBlurBg,
-              'text-black': isBlurBg,
+              'text-[#333]': isBlurBg,
             }
           )}
         >
-          <Logo />
+          <Logo className={clsx('h-7', 'sm:h-10 sm:w-[150px]')} />
           <NavigationMenu />
         </div>
       </div>
