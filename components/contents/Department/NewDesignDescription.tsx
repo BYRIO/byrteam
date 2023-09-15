@@ -11,7 +11,7 @@ export default function NewDesignDescription() {
     >
       <div
         className={clsx(
-          'font-poppins-800 absolute inset-0 -mr-1 flex flex-col justify-center text-right italic opacity-20',
+          'absolute inset-0 -mr-1 flex flex-col justify-center text-right font-poppins-800 italic opacity-20',
           'gap-5 text-6xl',
           'sm:gap-5 sm:text-7xl',
           'md:gap-5 md:text-8xl',
@@ -54,7 +54,7 @@ export default function NewDesignDescription() {
               </span>
             </div>
           </div>
-          <div className="font-dfphei w-fit p-[10px] text-5xl tracking-[7.2px]">
+          <div className="w-fit p-[10px] font-dfphei text-5xl tracking-[7.2px]">
             *找一些新的人做新的__*
           </div>
           <div className="border-[2px] border-[#0067D1] bg-white/40 px-2 text-2xl leading-none tracking-[3px]">
@@ -70,7 +70,7 @@ export default function NewDesignDescription() {
             <p>#第二课堂</p>
           </div>
         </section>
-        <section className="border-[2px] border-[#0067D1]">
+        <section className="w-fit border-[2px] border-[#0067D1]">
           <div className="bg-white/40 text-base leading-[111%] tracking-[2.4px]">
             只要你喜欢__想了解__，你都可以来定义byrTeam的__
           </div>

@@ -152,7 +152,7 @@ export default function Hero() {
                 'px-10 py-5 sm:px-8 sm:py-4',
                 'mr-0 sm:mr-auto '
               )}
-              href="/"
+              href="https://byr-team.feishu.cn/share/base/form/shrcnalyjQyTjH21EXDzQJboW7e"
             >
               加入我们
             </a>
