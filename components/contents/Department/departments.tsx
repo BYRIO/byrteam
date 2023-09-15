@@ -12,7 +12,7 @@ import TechDektWebImg from '@/assets/images/departments/tech-dekt-web.jpg';
 
 import clsx from 'clsx';
 
-import MediaDescription from './MediaDescription';
+import  MediaDescription  from './MediaDescription';
 import DesignDescription from './NewDesignDescription';
 import TechDescription from './TechDescription';
 
@@ -31,6 +31,29 @@ export function ChalkSpan({ content }: { content: string }) {
     </div>
   );
 }
+
+export function ChalkSpan2({ content }: { content: string }) {
+  return (
+    <div className="relative block w-fit px-[100px] max-sm:-ml-3 max-sm:scale-75">
+      <div
+        className={clsx(
+          'absolute left-0 bottom-0 h-3/5 w-1/2',
+          'bg-gradient-to-l from-[#DAFF47] to-[#D9D9D900]'
+        )}
+      ></div>
+      <div
+        className={clsx(
+          'absolute right-0 bottom-0 h-3/5 w-1/2',
+          'bg-gradient-to-r from-[#DAFF47] to-[#D9D9D900]'
+        )}
+      ></div>
+      <h2 className="relative ml-2 text-[30px] font-smiley leading-tight whitespace-nowrap ">
+        {content}
+      </h2>
+    </div>
+  );
+}
+
 
 function RequirementGroup({
   title,
@@ -81,9 +104,9 @@ export function DepartmentCard({
   }>;
   icon: FC<SVGProps<SVGGElement>>;
 }) {
-  // if (name === '新媒体组') {
-  //   return <MediaDescription />;
-  // }
+  if (name === '新媒体组') {
+    return <MediaDescription />;
+  }
   if (name === '设计组') {
     return <DesignDescription />;
   }
