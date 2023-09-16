@@ -139,6 +139,7 @@ export default function Hero() {
                 className="pointer-events-auto underline underline-offset-4"
                 href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=d5L-wJPXBmx8KUFgl9bdcVeOcg5rBPQF&authKey=UCJz3szW5XT%2BYeraU7QAgzXW2kKU9Z5ZsRavw%2FXiThBPTnI06kx4OGMNZQX%2BA9NF&noverify=0&group_code=259579529"
                 rel="noreferrer noopener"
+                target="_blank"
               >
                 【BYR Team 2023年招新咨询群】
               </a>
@@ -153,6 +154,8 @@ export default function Hero() {
                 'mr-0 sm:mr-auto '
               )}
               href="https://byr-team.feishu.cn/share/base/form/shrcnalyjQyTjH21EXDzQJboW7e"
+              rel="noreferrer noopener"
+              target="_blank"
             >
               加入我们
             </a>

@@ -14,3 +14,13 @@
     white-space: nowrap;
   }
 }
+.BlurBG {
+  @apply bg-[#F5F5F5]/50 backdrop-blur-sm;
+}
+.ProductBG {
+  background-image: url('~@/assets/images/departments/product/product-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: 2419px 1524px;
+}
