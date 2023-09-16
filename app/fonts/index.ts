@@ -1,11 +1,11 @@
 import localFont from 'next/font/local';
 
 export const SmileySans = localFont({
-  src: './SmileySans.woff2',
+  src: './SmileySans.woff',
   variable: '--font-smiley',
 });
 export const DFPHeiW12 = localFont({
-  src: './DFPHeiW12-GB5.woff2',
+  src: './DFPHeiW12-GB5.woff',
   variable: '--font-dfphei',
 });
 export const Poppins800 = localFont({
