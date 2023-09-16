@@ -3,43 +3,45 @@ import ProductBg from '@/assets/images/departments/product/product-bg.png';
 import Image from 'next/image';
 
 import clsx from 'clsx';
+import { HTMLProps } from 'react';
 
-export function BlurSpan({ content }: { content: string }){
-    return(
-        <span className={clsx(
-            'mt-5 text-[15px]',
-            {
-              [style.BlurBG]:true,
-            }
-        )}>
-            {content}
-        </span>
-    )
+export function BlurSpan({
+  content,
+  className,
+}: { content: string } & HTMLProps<HTMLSpanElement>) {
+  return (
+    <span
+      className={clsx(
+        'w-fit rounded-lg p-[10px] text-lg tracking-[3.6px] text-[#333] sm:text-2xl',
+        style.BlurBG,
+        className
+      )}
+    >
+      {content}
+    </span>
+  );
 }
 
 export default function ProductDescription() {
   return (
-    <div className='overflow-hidden flex flex-col relative w-[335px] h-[340px]'>
-        
-        <div className='absolute inset-0 flex items-center justify-center scale-150 z-0 '> 
-            <Image
-                className="scale-150 z-0"
-                src={ProductBg}
-                alt=""
-            />
-        </div>
-        <div className='flex flex-col z-20 absolute -top-10 p-10'>
-            <BlurSpan content="我们的日常工作就是负责对产品进行定义并进行需求分析绘制使用流程图，
-                协调技术、设计部门推进项目开发进度。" />
-            
-            <BlurSpan content="收集师生需求&整合各类资源&撰写产品需求文档等相关文字材料" />
-            
-            <BlurSpan content="欢迎全新的你加入我们，一起构思新的产品，策划新的活动!" />
-            
-        </div>
-        
-        
+    <div
+      className={clsx(
+        'relative flex h-full min-h-[548px] w-full flex-col overflow-hidden',
+        style.ProductBG
+      )}
+    >
+      <div className="mt-auto flex flex-col items-end gap-8 px-[25px] py-[50px]">
+        <BlurSpan
+          content="我们的日常工作就是负责对产品进行定义并进行需求分析绘制使用流程图，
+                协调技术、设计部门推进项目开发进度。"
+          className="max-w-[528px]"
+        />
+        <BlurSpan content="收集师生需求&整合各类资源&撰写产品需求文档等相关文字材料" />
+        <BlurSpan
+          content="欢迎全新的你加入我们，一起构思新的产品，策划新的活动!"
+          className="max-w-[458px]"
+        />
+      </div>
     </div>
-
   );
 }

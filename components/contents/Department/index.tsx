@@ -3,7 +3,7 @@
 import ChalkTitle from '@/components/common/ChalkTitle';
 import { useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { DepartmentCard, departments } from './departments';
+import { departments } from './departments';
 import clsx from 'clsx';
 import AnimatedSilk from './AnimatedSilk';
 import { shuffle } from 'lodash';
@@ -89,7 +89,7 @@ function Department() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <DepartmentCard {...shuffledDepartments[selected]} />
+                {shuffledDepartments[selected].content}
               </motion.div>
             </AnimatePresence>
             {/* {selected !== 3 && (
