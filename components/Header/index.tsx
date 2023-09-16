@@ -65,7 +65,7 @@ export default function Header() {
           }
         )}
       ></div>
-      <div className="px-12 py-3">
+      <div className="py-3 pl-3 pr-12 sm:px-12">
         <div
           className={clsx(
             'flex items-center justify-between transition duration-500',

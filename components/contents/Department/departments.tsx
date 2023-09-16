@@ -13,10 +13,9 @@ import TechDektWebImg from '@/assets/images/departments/tech-dekt-web.jpg';
 import clsx from 'clsx';
 
 import MediaDescription from './MediaDescription';
-import DesignDescription from './NewDesignDescription';
+import DesignDescription from './DesignDescription';
 import TechDescription from './TechDescription';
 import ProductDescription from './ProductDescription';
-import NewDesignDescription from './NewDesignDescription';
 
 export function ChalkSpan({ content }: { content: string }) {
   return (
@@ -28,28 +27,6 @@ export function ChalkSpan({ content }: { content: string }) {
         )}
       ></div>
       <h2 className="relative ml-2 text-[22px] font-semibold leading-tight">
-        {content}
-      </h2>
-    </div>
-  );
-}
-
-export function ChalkSpan2({ content }: { content: string }) {
-  return (
-    <div className="relative block w-fit px-[100px] max-sm:-ml-3 max-sm:scale-75">
-      <div
-        className={clsx(
-          'absolute bottom-0 left-0 h-3/5 w-1/2',
-          'bg-gradient-to-l from-[#DAFF47] to-[#D9D9D900]'
-        )}
-      ></div>
-      <div
-        className={clsx(
-          'absolute bottom-0 right-0 h-3/5 w-1/2',
-          'bg-gradient-to-r from-[#DAFF47] to-[#D9D9D900]'
-        )}
-      ></div>
-      <h2 className="relative ml-2 whitespace-nowrap font-smiley text-[30px] leading-tight ">
         {content}
       </h2>
     </div>
@@ -191,7 +168,7 @@ export const departments = [
   {
     name: '设计组',
     icon: IconDesign,
-    content: <NewDesignDescription />,
+    content: <DesignDescription />,
   },
 ] as Array<{
   name: string;
