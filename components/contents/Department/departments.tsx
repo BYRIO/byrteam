@@ -1,14 +1,10 @@
-import { ComponentProps, FC, ReactNode, SVGProps } from 'react';
-import Image from 'next/image';
+import { FC, ReactNode, SVGProps } from 'react';
 import IconArrowTR from '@/assets/images/departments/icon-arrow-tr.svg';
 import IconArrowR from '@/assets/images/departments/icon-arrow-r.svg';
 import IconTech from '@/assets/images/departments/icon-tech.svg';
 import IconMedia from '@/assets/images/departments/icon-media.svg';
 import IconProduct from '@/assets/images/departments/icon-product.svg';
 import IconDesign from '@/assets/images/departments/icon-design.svg';
-import ProductWorkImg from '@/assets/images/departments/product-work.png';
-import TechDektImg from '@/assets/images/departments/tech-dekt.jpg';
-import TechDektWebImg from '@/assets/images/departments/tech-dekt-web.jpg';
 
 import clsx from 'clsx';
 

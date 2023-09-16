@@ -1,6 +1,13 @@
 import Quote from '@/assets/images/senpai-saying/quote.svg';
 
-import { ComponentProps, FC, HTMLProps, ReactNode, SVGProps } from 'react';
+import {
+  ComponentProps,
+  FC,
+  HTMLProps,
+  ReactNode,
+  SVGProps,
+  useMemo,
+} from 'react';
 import clsx from 'clsx';
 
 import {
@@ -10,6 +17,8 @@ import {
   SenpaiFemale3,
   SenpaiFemale4,
 } from './Senpais';
+import { shuffle } from 'lodash';
+import dynamic from 'next/dynamic';
 
 enum Sex {
   male = 0,
@@ -220,12 +229,17 @@ function SenpaiCard(
   );
 }
 
-export default function Cards() {
+function Cards() {
+  const shuffledInfo = useMemo(() => shuffle(info), []);
   return (
     <>
-      {info.map((item, index) => (
+      {shuffledInfo.map((item, index) => (
         <SenpaiCard {...item} key={item.name + '-' + index} />
       ))}
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(Cards), {
+  ssr: false,
+});
