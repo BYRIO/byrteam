@@ -1,15 +1,17 @@
 'use client';
 
 import ChalkTitle from '@/components/common/ChalkTitle';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { DepartmentCard, departments } from './departments';
 import clsx from 'clsx';
 import AnimatedSilk from './AnimatedSilk';
+import { shuffle } from 'lodash';
+import dynamic from 'next/dynamic';
 
-export default function Department() {
+function Department() {
   const [selected, setSelected] = useState(0);
-
+  const shuffledDepartments = useMemo(() => shuffle(departments), []);
   return (
     <motion.section
       className={clsx('mx-auto max-w-[1280px] pt-12', 'px-4', 'sm:px-10')}
@@ -23,7 +25,7 @@ export default function Department() {
         <div className="flex flex-col gap-3 rounded-2xl bg-white p-3 sm:p-6 lg:flex-row">
           <nav className="rounded-xl bg-[#F5F5F5] p-3 sm:p-3 lg:p-6">
             <ul className="flex justify-between sm:gap-4 lg:flex-col lg:gap-6">
-              {departments.map(({ name, icon: Icon }, index) => (
+              {shuffledDepartments.map(({ name, icon: Icon }, index) => (
                 <li
                   key={`${name}-index`}
                   className={clsx(
@@ -82,12 +84,12 @@ export default function Department() {
             <AnimatePresence mode="wait">
               <motion.div
                 className="h-full"
-                key={departments[selected].name}
+                key={shuffledDepartments[selected].name}
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <DepartmentCard {...departments[selected]} />
+                <DepartmentCard {...shuffledDepartments[selected]} />
               </motion.div>
             </AnimatePresence>
             {/* {selected !== 3 && (
@@ -107,3 +109,7 @@ export default function Department() {
     </motion.section>
   );
 }
+
+export default dynamic(() => Promise.resolve(Department), {
+  ssr: false,
+});
