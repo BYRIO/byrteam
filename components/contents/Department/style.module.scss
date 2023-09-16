@@ -14,3 +14,6 @@
     white-space: nowrap;
   }
 }
+.BlurBG {
+  @apply rounded-xl bg-[#F5F5F5]/50 p-2 backdrop-blur-sm;
+}

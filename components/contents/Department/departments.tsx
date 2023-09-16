@@ -12,9 +12,10 @@ import TechDektWebImg from '@/assets/images/departments/tech-dekt-web.jpg';
 
 import clsx from 'clsx';
 
-import  MediaDescription  from './MediaDescription';
+import MediaDescription from './MediaDescription';
 import DesignDescription from './NewDesignDescription';
 import TechDescription from './TechDescription';
+import ProductDescription from './ProductDescription';
 
 export function ChalkSpan({ content }: { content: string }) {
   return (
@@ -37,23 +38,22 @@ export function ChalkSpan2({ content }: { content: string }) {
     <div className="relative block w-fit px-[100px] max-sm:-ml-3 max-sm:scale-75">
       <div
         className={clsx(
-          'absolute left-0 bottom-0 h-3/5 w-1/2',
+          'absolute bottom-0 left-0 h-3/5 w-1/2',
           'bg-gradient-to-l from-[#DAFF47] to-[#D9D9D900]'
         )}
       ></div>
       <div
         className={clsx(
-          'absolute right-0 bottom-0 h-3/5 w-1/2',
+          'absolute bottom-0 right-0 h-3/5 w-1/2',
           'bg-gradient-to-r from-[#DAFF47] to-[#D9D9D900]'
         )}
       ></div>
-      <h2 className="relative ml-2 text-[30px] font-smiley leading-tight whitespace-nowrap ">
+      <h2 className="relative ml-2 whitespace-nowrap font-smiley text-[30px] leading-tight ">
         {content}
       </h2>
     </div>
   );
 }
-
 
 function RequirementGroup({
   title,
@@ -112,6 +112,9 @@ export function DepartmentCard({
   }
   if (name === '技术组') {
     return <TechDescription />;
+  }
+  if (name === '产品运营组') {
+    return <ProductDescription />;
   }
   return (
     <div className="flex h-full flex-col gap-1 text-[#333] sm:flex-row sm:gap-0">
