@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 import { HTMLProps, ReactNode, useCallback, useEffect, useState } from 'react';
 
-import HeroBG1 from '@/assets/images/demo-hero-bg.png';
+import HeroBG1 from '@/assets/images/demo-hero-bg.jpg';
 import Image from 'next/image';
 
 function EmblaCarouselItemWrapper(props: { children: ReactNode }) {
