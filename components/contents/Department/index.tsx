@@ -78,7 +78,7 @@ export default function Department() {
               ))}
             </ul>
           </nav>
-          <main className="relative grow">
+          <main className="relative min-w-0 grow">
             <AnimatePresence mode="wait">
               <motion.div
                 className="h-full"
@@ -90,7 +90,7 @@ export default function Department() {
                 <DepartmentCard {...departments[selected]} />
               </motion.div>
             </AnimatePresence>
-            {selected !== 3 && (
+            {/* {selected !== 3 && (
               <div
                 key={departments[selected].name + '-silk'}
                 className={clsx(
@@ -100,7 +100,7 @@ export default function Department() {
               >
                 <AnimatedSilk />
               </div>
-            )}
+            )} */}
           </main>
         </div>
       </div>

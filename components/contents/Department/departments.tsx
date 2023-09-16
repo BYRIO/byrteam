@@ -14,6 +14,7 @@ import clsx from 'clsx';
 
 import MediaDescription from './MediaDescription';
 import DesignDescription from './NewDesignDescription';
+import TechDescription from './TechDescription';
 
 export function ChalkSpan({ content }: { content: string }) {
   return (
@@ -85,6 +86,9 @@ export function DepartmentCard({
   // }
   if (name === '设计组') {
     return <DesignDescription />;
+  }
+  if (name === '技术组') {
+    return <TechDescription />;
   }
   return (
     <div className="flex h-full flex-col gap-1 text-[#333] sm:flex-row sm:gap-0">

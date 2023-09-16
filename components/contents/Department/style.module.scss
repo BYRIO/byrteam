@@ -1,0 +1,16 @@
+.TechBG {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  user-select: none;
+  max-height: 568px;
+  overflow-y: hidden;
+  p {
+    color: rgba(0, 103, 209, 0.16);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 134.5%;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+}
