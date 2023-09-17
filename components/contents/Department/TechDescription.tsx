@@ -74,8 +74,8 @@ function BorderParagrahph({
 export default function TechDescription() {
   return (
     <section className="relative h-full">
-      <div className="relative overflow-x-hidden">
-        <div className={styles.TechBG}>
+      <div className="relative">
+        <div className={clsx(styles.TechBG, 'overflow-x-hidden')}>
           {binaryStrings.map((binaryString, index) => (
             <p key={index}>{binaryString}</p>
           ))}

@@ -14,6 +14,7 @@ import clsx from 'clsx';
 
 import { FC, ReactNode, SVGProps } from 'react';
 import style from './style.module.scss';
+import { motion } from 'framer-motion';
 
 function Chat({
   children,
@@ -166,7 +167,7 @@ export default function Description() {
               }
               isYou
             />
-            <div className="text-center leading-[180%] opacity-60">
+            <div className="text-center leading-[180%] opacity-60 max-sm:text-xs sm:text-base">
               北邮人团队 新媒体组 拍了拍 你，并发送了一条加群邀请
             </div>
             <WechatDialog
@@ -248,10 +249,10 @@ export default function Description() {
           </article>
         </ScrollArea.Viewport>
         <ScrollArea.Scrollbar
-          className="flex touch-none select-none p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col"
+          className="flex touch-none select-none p-0.5 data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col"
           orientation="vertical"
         >
-          <ScrollArea.Thumb className="relative flex-1 cursor-grab rounded-[10px] bg-black/30 before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:w-full before:min-w-[44px] before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] hover:bg-black/60 active:cursor-grabbing" />
+          <ScrollArea.Thumb className="relative flex-1 cursor-grab rounded-[10px] bg-black/30 transition-colors duration-[160ms] ease-out before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:w-full before:min-w-[44px] before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] hover:bg-black/60 active:cursor-grabbing" />
         </ScrollArea.Scrollbar>
       </ScrollArea.Root>
 
