@@ -10,6 +10,7 @@ import style from './style.module.scss';
 import MenuToggle from './MenuToggle';
 import { links } from './link';
 import AnimatedMenu from './AnimatedMenu';
+import Link from 'next/link';
 
 function NavigationMenu() {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -75,7 +76,9 @@ export default function Header() {
             }
           )}
         >
-          <Logo className={clsx('h-7', 'sm:h-10 sm:w-[150px]')} />
+          <Link href="/">
+            <Logo className={clsx('h-7', 'sm:h-10 sm:w-[150px]')} />
+          </Link>
           <NavigationMenu />
         </div>
       </div>
