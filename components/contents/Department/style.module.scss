@@ -26,7 +26,8 @@
 }
 .MediaBG {
   background-image: url('~@/assets/images/departments/media/star-bg.svg');
-  background-position: top;
-  background-size: 110%;
+  background-position-x: center;
+  background-position-y: top;
   background-repeat: repeat-y;
+  @apply bg-[520px_auto] sm:bg-[820px_auto] lg:bg-[960px_auto];
 }
