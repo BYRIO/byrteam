@@ -136,7 +136,7 @@ function ChalkSpan({ content }: { content: ReactNode }) {
 export default function Description() {
   return (
     <section className="overflow-hidden rounded-xl border-[0.5px] bg-[#F6F8FC]">
-      <header className="flex h-[75px] items-center justify-between border-b-[0.5px] p-4 text-[#333]">
+      <header className="flex h-[75px] items-center justify-between border-b-[0.5px] px-4 text-[#333] max-sm:py-2 sm:py-4">
         <div className=" text-2xl leading-[180%] tracking-[4.8px]">
           🎉招新啦🎉
         </div>
@@ -256,16 +256,16 @@ export default function Description() {
       </ScrollArea.Root>
 
       <footer className="bg-white p-4">
-        <div className="flex items-center justify-between rounded-full bg-[#F6F8FC] px-11 py-3 text-black/40">
-          <div className="border-r-[2px] pr-6 [&>svg]:cursor-pointer">
+        <div className="flex items-center justify-between rounded-full bg-[#F6F8FC] text-black/40 max-md:px-6 max-md:py-[6px] md:px-11 md:py-3">
+          <div className="border-r-[2px] max-sm:pr-3 sm:pr-6 [&>svg]:cursor-pointer [&>svg]:max-sm:h-5 [&>svg]:max-sm:w-5">
             <IconPin />
           </div>
           <input
-            className="grow bg-transparent px-7 py-[3px] outline-none placeholder:tracking-[2.16px]"
+            className="min-w-0 bg-transparent py-[3px] outline-none placeholder:tracking-[2.16px] max-sm:shrink max-sm:px-4 sm:grow sm:px-7"
             type="text"
             placeholder="请输入..."
           />
-          <div className="flex justify-between gap-[28px] [&>svg]:cursor-pointer">
+          <div className="flex justify-between gap-4 sm:gap-5 md:gap-7 [&>svg]:cursor-pointer [&>svg]:max-sm:h-6 [&>svg]:max-sm:w-6">
             <IconSmile />
             <IconPhoto />
             <IconLocation />
