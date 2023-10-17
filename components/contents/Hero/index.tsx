@@ -153,7 +153,6 @@ export default function Hero() {
               >
                 join@byr.ink
               </a>
-              ！
             </p>
           </div>
           <div className="front-medium flex justify-center">
