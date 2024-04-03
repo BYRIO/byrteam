@@ -9,7 +9,7 @@ import { SmileySans, DFPHeiW12, Poppins800 } from './fonts/index';
 
 export const metadata: Metadata = {
   title: '北邮人团队',
-  description: '北邮人团队2023首页',
+  description: '北邮人团队2024首页',
 };
 
 export default function RootLayout({
