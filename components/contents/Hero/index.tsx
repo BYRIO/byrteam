@@ -134,17 +134,17 @@ export default function Hero() {
               Want You！
             </p>
             <p className="mt-3">
-              {/* 点击加入群聊
+              点击加入群聊
               <a
                 className="pointer-events-auto underline underline-offset-4"
-                href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=d5L-wJPXBmx8KUFgl9bdcVeOcg5rBPQF&authKey=UCJz3szW5XT%2BYeraU7QAgzXW2kKU9Z5ZsRavw%2FXiThBPTnI06kx4OGMNZQX%2BA9NF&noverify=0&group_code=259579529"
+                href="https://qm.qq.com/q/T0yhPA3GU2"
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                【BYR Team 2023年招新咨询群】
+                【2024学年北邮人团队招新群】
               </a>
-              了解更多吧 */}
-              想加入BYR Team？请将简历投递至邮箱
+              了解更多吧
+              {/* 想加入BYR Team？请将简历投递至邮箱
               <a
                 href="mailto:join@byr.ink"
                 rel="noreferrer noopener"
@@ -152,7 +152,7 @@ export default function Hero() {
                 className="pointer-events-auto ml-1 underline"
               >
                 join@byr.ink
-              </a>
+              </a> */}
             </p>
           </div>
           <div className="front-medium flex justify-center">
@@ -163,7 +163,8 @@ export default function Hero() {
                 'mr-0 sm:mr-auto '
               )}
               // href="https://byr-team.feishu.cn/share/base/form/shrcnalyjQyTjH21EXDzQJboW7e"
-              href="mailto:join@byr.ink"
+              // href="mailto:join@byr.ink"
+              href = "https://qm.qq.com/q/T0yhPA3GU2"
               rel="noreferrer noopener"
               target="_blank"
             >
