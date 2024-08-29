@@ -13,7 +13,7 @@ importers:
         version: 10.15.1
       '@radix-ui/react-scroll-area':
         specifier: ^1.0.4
-        version: 1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+        version: 1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/node':
         specifier: 20.5.1
         version: 20.5.1
@@ -34,7 +34,7 @@ importers:
         version: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.9.tgz
       embla-carousel-autoplay:
         specifier: 8.0.0-rc12
-        version: https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz(embla-carousel@8.0.0-rc12)
+        version: https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz(embla-carousel@https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz)
       embla-carousel-react:
         specifier: 8.0.0-rc12
         version: https://registry.npmmirror.com/embla-carousel-react/-/embla-carousel-react-8.0.0-rc12.tgz(react@18.2.0)
@@ -46,7 +46,7 @@ importers:
         version: 13.4.19(eslint@8.47.0)(typescript@5.1.6)
       framer-motion:
         specifier: ^10.16.1
-        version: https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz(react-dom@18.2.0)(react@18.2.0)
+        version: https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -55,7 +55,7 @@ importers:
         version: 10.16.2
       next:
         specifier: 13.4.19
-        version: 13.4.19(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.66.1)
+        version: 13.4.19(@babel/core@7.22.10)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz)
       postcss:
         specifier: 8.4.28
         version: 8.4.28
@@ -65,6 +65,9 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-hot-toast:
+        specifier: ^2.4.1
+        version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       sass:
         specifier: ^1.66.1
         version: https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz
@@ -736,8 +739,7 @@ packages:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
 
   '@emotion/memoize@https://registry.npmmirror.com/@emotion/memoize/-/memoize-0.7.4.tgz':
-    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@emotion/memoize/-/memoize-0.7.4.tgz}
-    name: '@emotion/memoize'
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==, tarball: https://registry.npmmirror.com/@emotion/memoize/-/memoize-0.7.4.tgz}
     version: 0.7.4
 
   '@eslint-community/eslint-utils@4.4.0':
@@ -1155,8 +1157,7 @@ packages:
     engines: {node: '>= 8'}
 
   anymatch@https://registry.npmmirror.com/anymatch/-/anymatch-3.1.3.tgz:
-    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/anymatch/-/anymatch-3.1.3.tgz}
-    name: anymatch
+    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==, tarball: https://registry.npmmirror.com/anymatch/-/anymatch-3.1.3.tgz}
     version: 3.1.3
     engines: {node: '>= 8'}
 
@@ -1242,8 +1243,7 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
   binary-extensions@https://registry.npmmirror.com/binary-extensions/-/binary-extensions-2.2.0.tgz:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/binary-extensions/-/binary-extensions-2.2.0.tgz}
-    name: binary-extensions
+    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==, tarball: https://registry.npmmirror.com/binary-extensions/-/binary-extensions-2.2.0.tgz}
     version: 2.2.0
     engines: {node: '>=8'}
 
@@ -1258,8 +1258,7 @@ packages:
     engines: {node: '>=8'}
 
   braces@https://registry.npmmirror.com/braces/-/braces-3.0.2.tgz:
-    resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/braces/-/braces-3.0.2.tgz}
-    name: braces
+    resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==, tarball: https://registry.npmmirror.com/braces/-/braces-3.0.2.tgz}
     version: 3.0.2
     engines: {node: '>=8'}
 
@@ -1303,8 +1302,7 @@ packages:
     engines: {node: '>= 8.10.0'}
 
   chokidar@https://registry.npmmirror.com/chokidar/-/chokidar-3.5.3.tgz:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/chokidar/-/chokidar-3.5.3.tgz}
-    name: chokidar
+    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==, tarball: https://registry.npmmirror.com/chokidar/-/chokidar-3.5.3.tgz}
     version: 3.5.3
     engines: {node: '>= 8.10.0'}
 
@@ -1384,8 +1382,7 @@ packages:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
 
   dayjs@https://registry.npmmirror.com/dayjs/-/dayjs-1.11.9.tgz:
-    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.9.tgz}
-    name: dayjs
+    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.9.tgz}
     version: 1.11.9
 
   debug@3.2.7:
@@ -1458,32 +1455,25 @@ packages:
     resolution: {integrity: sha512-qeXC3Zbykq44RCrBa4kr8v/dWzYJA8rAwpyh9Qd+NKWoJfjG5vvJqy9XOJ9H4P/lqulZBCgUWAYi+FeK5AuJ8g==}
 
   embla-carousel-autoplay@https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz:
-    resolution: {integrity: sha512-r7kdzpUhnI6rjCjv1CVGJEIj0HF+gEqnO7ip7rLBmmyGZ5xGhO+pjKhAlG+JqCuqr1Xhk8mxO4aGkAxyq2nKAw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz}
-    name: embla-carousel-autoplay
+    resolution: {integrity: sha512-r7kdzpUhnI6rjCjv1CVGJEIj0HF+gEqnO7ip7rLBmmyGZ5xGhO+pjKhAlG+JqCuqr1Xhk8mxO4aGkAxyq2nKAw==, tarball: https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz}
     version: 8.0.0-rc12
     peerDependencies:
       embla-carousel: 8.0.0-rc12
 
   embla-carousel-react@https://registry.npmmirror.com/embla-carousel-react/-/embla-carousel-react-8.0.0-rc12.tgz:
-    resolution: {integrity: sha512-Tyd9TNH9i8bb/0S9/WZsmEvfZm8jlFU9sgaWNNgLzbPsUtz/L6UTYuRGOBDOt2oh6VPhaL1G8vRuOAuH81G5Cg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/embla-carousel-react/-/embla-carousel-react-8.0.0-rc12.tgz}
-    name: embla-carousel-react
+    resolution: {integrity: sha512-Tyd9TNH9i8bb/0S9/WZsmEvfZm8jlFU9sgaWNNgLzbPsUtz/L6UTYuRGOBDOt2oh6VPhaL1G8vRuOAuH81G5Cg==, tarball: https://registry.npmmirror.com/embla-carousel-react/-/embla-carousel-react-8.0.0-rc12.tgz}
     version: 8.0.0-rc12
     peerDependencies:
       react: ^16.8.0 || ^17.0.1 || ^18.0.0
 
   embla-carousel-reactive-utils@https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz:
-    resolution: {integrity: sha512-sHYqMYW2qk9UXNMLoBmo4PRe+8qOW8CJDDqfkMB0WlSfrzgi9fCc36nArQz6k9olHsVfEc3haw00KiqRBvVwEg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz}
-    name: embla-carousel-reactive-utils
+    resolution: {integrity: sha512-sHYqMYW2qk9UXNMLoBmo4PRe+8qOW8CJDDqfkMB0WlSfrzgi9fCc36nArQz6k9olHsVfEc3haw00KiqRBvVwEg==, tarball: https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz}
     version: 8.0.0-rc12
     peerDependencies:
       embla-carousel: 8.0.0-rc12
 
-  embla-carousel@8.0.0-rc12:
-    resolution: {integrity: sha512-/Xkf5zp9gs9Y45lSAT1Witn+r+o+EtoIIZg4V2lYTCaaqdDTxyO0Ddn+z00ya38JGNZrGH9U8wLGK5Hi76CRxw==}
-
   embla-carousel@https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz:
-    resolution: {integrity: sha512-/Xkf5zp9gs9Y45lSAT1Witn+r+o+EtoIIZg4V2lYTCaaqdDTxyO0Ddn+z00ya38JGNZrGH9U8wLGK5Hi76CRxw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz}
-    name: embla-carousel
+    resolution: {integrity: sha512-/Xkf5zp9gs9Y45lSAT1Witn+r+o+EtoIIZg4V2lYTCaaqdDTxyO0Ddn+z00ya38JGNZrGH9U8wLGK5Hi76CRxw==, tarball: https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz}
     version: 8.0.0-rc12
 
   emoji-regex@9.2.2:
@@ -1540,8 +1530,7 @@ packages:
         optional: true
 
   eslint-config-prettier@https://registry.npmmirror.com/eslint-config-prettier/-/eslint-config-prettier-9.0.0.tgz:
-    resolution: {integrity: sha512-IcJsTkJae2S35pRsRAwoCE+925rJJStOdkKnLVgtE+tEpqU0EVVM7OqrwxqgptKdX29NUwC82I5pXsGFIgSevw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/eslint-config-prettier/-/eslint-config-prettier-9.0.0.tgz}
-    name: eslint-config-prettier
+    resolution: {integrity: sha512-IcJsTkJae2S35pRsRAwoCE+925rJJStOdkKnLVgtE+tEpqU0EVVM7OqrwxqgptKdX29NUwC82I5pXsGFIgSevw==, tarball: https://registry.npmmirror.com/eslint-config-prettier/-/eslint-config-prettier-9.0.0.tgz}
     version: 9.0.0
     hasBin: true
     peerDependencies:
@@ -1660,8 +1649,7 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
 
   fill-range@https://registry.npmmirror.com/fill-range/-/fill-range-7.0.1.tgz:
-    resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/fill-range/-/fill-range-7.0.1.tgz}
-    name: fill-range
+    resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==, tarball: https://registry.npmmirror.com/fill-range/-/fill-range-7.0.1.tgz}
     version: 7.0.1
     engines: {node: '>=8'}
 
@@ -1683,8 +1671,7 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
 
   framer-motion@https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz:
-    resolution: {integrity: sha512-K6TXr5mZtitC/dxQCBdg7xzdN0d5IAIrlaqCPKtIQVdzVPGC0qBuJKXggHX1vjnP5gPOFwB1KbCCTWcnFc3kWg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz}
-    name: framer-motion
+    resolution: {integrity: sha512-K6TXr5mZtitC/dxQCBdg7xzdN0d5IAIrlaqCPKtIQVdzVPGC0qBuJKXggHX1vjnP5gPOFwB1KbCCTWcnFc3kWg==, tarball: https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz}
     version: 10.16.1
     peerDependencies:
       react: ^18.0.0
@@ -1736,8 +1723,7 @@ packages:
     engines: {node: '>=10.13.0'}
 
   glob-parent@https://registry.npmmirror.com/glob-parent/-/glob-parent-5.1.2.tgz:
-    resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/glob-parent/-/glob-parent-5.1.2.tgz}
-    name: glob-parent
+    resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, tarball: https://registry.npmmirror.com/glob-parent/-/glob-parent-5.1.2.tgz}
     version: 5.1.2
     engines: {node: '>= 6'}
 
@@ -1768,6 +1754,11 @@ packages:
   globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
+
+  goober@2.1.14:
+    resolution: {integrity: sha512-4UpC0NdGyAFqLNPnhCT2iHpza2q+RAY3GV85a/mRPdzyPQMsj0KmMMuetdIkzWRbJ+Hgau1EZztq8ImmiMGhsg==}
+    peerDependencies:
+      csstype: ^3.0.10
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -1816,8 +1807,7 @@ packages:
     engines: {node: '>= 4'}
 
   immutable@https://registry.npmmirror.com/immutable/-/immutable-4.3.3.tgz:
-    resolution: {integrity: sha512-808ZFYMsIRAjLAu5xkKo0TsbY9LBy9H5MazTKIEHerNkg0ymgilGfBPMR/3G7d/ihGmuK2Hw8S1izY2d3kd3wA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/immutable/-/immutable-4.3.3.tgz}
-    name: immutable
+    resolution: {integrity: sha512-808ZFYMsIRAjLAu5xkKo0TsbY9LBy9H5MazTKIEHerNkg0ymgilGfBPMR/3G7d/ihGmuK2Hw8S1izY2d3kd3wA==, tarball: https://registry.npmmirror.com/immutable/-/immutable-4.3.3.tgz}
     version: 4.3.3
 
   import-fresh@3.3.0:
@@ -1856,8 +1846,7 @@ packages:
     engines: {node: '>=8'}
 
   is-binary-path@https://registry.npmmirror.com/is-binary-path/-/is-binary-path-2.1.0.tgz:
-    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-binary-path/-/is-binary-path-2.1.0.tgz}
-    name: is-binary-path
+    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==, tarball: https://registry.npmmirror.com/is-binary-path/-/is-binary-path-2.1.0.tgz}
     version: 2.1.0
     engines: {node: '>=8'}
 
@@ -1881,8 +1870,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   is-extglob@https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz:
-    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz}
-    name: is-extglob
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==, tarball: https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz}
     version: 2.1.1
     engines: {node: '>=0.10.0'}
 
@@ -1898,8 +1886,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   is-glob@https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz:
-    resolution: {integrity: sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz}
-    name: is-glob
+    resolution: {integrity: sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==, tarball: https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz}
     version: 4.0.3
     engines: {node: '>=0.10.0'}
 
@@ -1915,8 +1902,7 @@ packages:
     engines: {node: '>= 0.4'}
 
   is-number@https://registry.npmmirror.com/is-number/-/is-number-7.0.0.tgz:
-    resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-number/-/is-number-7.0.0.tgz}
-    name: is-number
+    resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==, tarball: https://registry.npmmirror.com/is-number/-/is-number-7.0.0.tgz}
     version: 7.0.0
     engines: {node: '>=0.12.0'}
 
@@ -2092,6 +2078,7 @@ packages:
 
   next@13.4.19:
     resolution: {integrity: sha512-HuPSzzAbJ1T4BD8e0bs6B9C1kWQ6gv8ykZoRWs5AQoiIuqbGHHdQO7Ljuvg05Q0Z24E2ABozHe6FxDvI6HfyAw==}
+    version: 13.4.19
     engines: {node: '>=16.8.0'}
     hasBin: true
     peerDependencies:
@@ -2116,8 +2103,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   normalize-path@https://registry.npmmirror.com/normalize-path/-/normalize-path-3.0.0.tgz:
-    resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/normalize-path/-/normalize-path-3.0.0.tgz}
-    name: normalize-path
+    resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==, tarball: https://registry.npmmirror.com/normalize-path/-/normalize-path-3.0.0.tgz}
     version: 3.0.0
     engines: {node: '>=0.10.0'}
 
@@ -2215,8 +2201,7 @@ packages:
     engines: {node: '>=8.6'}
 
   picomatch@https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz:
-    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz}
-    name: picomatch
+    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, tarball: https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz}
     version: 2.3.1
     engines: {node: '>=8.6'}
 
@@ -2349,6 +2334,13 @@ packages:
     peerDependencies:
       react: ^18.2.0
 
+  react-hot-toast@2.4.1:
+    resolution: {integrity: sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -2364,8 +2356,7 @@ packages:
     engines: {node: '>=8.10.0'}
 
   readdirp@https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz:
-    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz}
-    name: readdirp
+    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, tarball: https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz}
     version: 3.6.0
     engines: {node: '>=8.10.0'}
 
@@ -2432,8 +2423,7 @@ packages:
     resolution: {integrity: sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA==}
 
   sass@https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz:
-    resolution: {integrity: sha512-50c+zTsZOJVgFfTgwwEzkjA3/QACgdNsKueWPyAR0mRINIvLAStVQBbPg14iuqEQ74NPDbXzJARJ/O4SI1zftA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz}
-    name: sass
+    resolution: {integrity: sha512-50c+zTsZOJVgFfTgwwEzkjA3/QACgdNsKueWPyAR0mRINIvLAStVQBbPg14iuqEQ74NPDbXzJARJ/O4SI1zftA==, tarball: https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz}
     version: 1.66.1
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -2473,8 +2463,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   source-map-js@https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz}
-    name: source-map-js
+    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, tarball: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz}
     version: 1.0.2
     engines: {node: '>=0.10.0'}
 
@@ -2546,8 +2535,7 @@ packages:
     hasBin: true
 
   tailwindcss-gradient@https://registry.npmmirror.com/tailwindcss-gradient/-/tailwindcss-gradient-1.0.1.tgz:
-    resolution: {integrity: sha512-wntnHroiThDogu2ly6eRynURgKHEOy2xzEriAmZCVtTLxHfchnbdi6Hx2fAXrIYVHStVn+Au35cuXuZKeRZcwg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/tailwindcss-gradient/-/tailwindcss-gradient-1.0.1.tgz}
-    name: tailwindcss-gradient
+    resolution: {integrity: sha512-wntnHroiThDogu2ly6eRynURgKHEOy2xzEriAmZCVtTLxHfchnbdi6Hx2fAXrIYVHStVn+Au35cuXuZKeRZcwg==, tarball: https://registry.npmmirror.com/tailwindcss-gradient/-/tailwindcss-gradient-1.0.1.tgz}
     version: 1.0.1
     peerDependencies:
       tailwindcss: 3.x
@@ -2576,8 +2564,7 @@ packages:
     engines: {node: '>=4'}
 
   to-regex-range@https://registry.npmmirror.com/to-regex-range/-/to-regex-range-5.0.1.tgz:
-    resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/to-regex-range/-/to-regex-range-5.0.1.tgz}
-    name: to-regex-range
+    resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==, tarball: https://registry.npmmirror.com/to-regex-range/-/to-regex-range-5.0.1.tgz}
     version: 5.0.1
     engines: {node: '>=8.0'}
 
@@ -2597,8 +2584,7 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
   tslib@https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz:
-    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz}
-    name: tslib
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz}
     version: 2.6.2
 
   type-check@0.4.0:
@@ -3638,41 +3624,46 @@ snapshots:
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.20)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
-      '@types/react': 18.2.20
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
   '@radix-ui/react-context@1.0.1(@types/react@18.2.20)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
-      '@types/react': 18.2.20
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
   '@radix-ui/react-direction@1.0.1(@types/react@18.2.20)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
-      '@types/react': 18.2.20
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
-  '@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)':
+  '@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.20)(react@18.2.0)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.20)(react@18.2.0)
-      '@types/react': 18.2.20
-      '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.2.20
+      '@types/react-dom': 18.2.7
 
-  '@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)':
+  '@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
       '@radix-ui/react-slot': 1.0.2(@types/react@18.2.20)(react@18.2.0)
-      '@types/react': 18.2.20
-      '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.2.20
+      '@types/react-dom': 18.2.7
 
-  '@radix-ui/react-scroll-area@1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)':
+  '@radix-ui/react-scroll-area@1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
       '@radix-ui/number': 1.0.1
@@ -3680,33 +3671,37 @@ snapshots:
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.20)(react@18.2.0)
       '@radix-ui/react-context': 1.0.1(@types/react@18.2.20)(react@18.2.0)
       '@radix-ui/react-direction': 1.0.1(@types/react@18.2.20)(react@18.2.0)
-      '@radix-ui/react-presence': 1.0.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-presence': 1.0.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.2.20)(react@18.2.0)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.20)(react@18.2.0)
-      '@types/react': 18.2.20
-      '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    optionalDependencies:
+      '@types/react': 18.2.20
+      '@types/react-dom': 18.2.7
 
   '@radix-ui/react-slot@1.0.2(@types/react@18.2.20)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.20)(react@18.2.0)
-      '@types/react': 18.2.20
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
   '@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.20)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
-      '@types/react': 18.2.20
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
   '@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.20)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.22.10
-      '@types/react': 18.2.20
       react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
   '@rushstack/eslint-patch@1.3.3': {}
 
@@ -3833,6 +3828,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.4.0
       debug: 4.3.4
       eslint: 8.47.0
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
@@ -3853,6 +3849,7 @@ snapshots:
       is-glob: https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz
       semver: 7.5.4
       ts-api-utils: 1.0.2(typescript@5.1.6)
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
@@ -4218,21 +4215,19 @@ snapshots:
 
   electron-to-chromium@1.4.496: {}
 
-  embla-carousel-autoplay@https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz(embla-carousel@8.0.0-rc12):
+  embla-carousel-autoplay@https://registry.npmmirror.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc12.tgz(embla-carousel@https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz):
     dependencies:
-      embla-carousel: 8.0.0-rc12
+      embla-carousel: https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz
 
   embla-carousel-react@https://registry.npmmirror.com/embla-carousel-react/-/embla-carousel-react-8.0.0-rc12.tgz(react@18.2.0):
     dependencies:
       embla-carousel: https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz
-      embla-carousel-reactive-utils: https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz(embla-carousel@8.0.0-rc12)
+      embla-carousel-reactive-utils: https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz(embla-carousel@https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz)
       react: 18.2.0
 
-  embla-carousel-reactive-utils@https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz(embla-carousel@8.0.0-rc12):
+  embla-carousel-reactive-utils@https://registry.npmmirror.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0-rc12.tgz(embla-carousel@https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz):
     dependencies:
       embla-carousel: https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz
-
-  embla-carousel@8.0.0-rc12: {}
 
   embla-carousel@https://registry.npmmirror.com/embla-carousel/-/embla-carousel-8.0.0-rc12.tgz: {}
 
@@ -4337,11 +4332,12 @@ snapshots:
       '@typescript-eslint/parser': 6.4.0(eslint@8.47.0)(typescript@5.1.6)
       eslint: 8.47.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.47.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0)
+      eslint-import-resolver-typescript: 3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0))(eslint@8.47.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.47.0)
       eslint-plugin-react: 7.33.2(eslint@8.47.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.47.0)
+    optionalDependencies:
       typescript: 5.1.6
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
@@ -4359,13 +4355,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.47.0):
+  eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.47.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0))(eslint@8.47.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0))(eslint@8.47.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.0
       is-core-module: 2.13.0
@@ -4376,19 +4372,19 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0))(eslint@8.47.0):
     dependencies:
-      '@typescript-eslint/parser': 6.4.0(eslint@8.47.0)(typescript@5.1.6)
       debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.4.0(eslint@8.47.0)(typescript@5.1.6)
       eslint: 8.47.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.47.0)
+      eslint-import-resolver-typescript: 3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0):
+  eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0))(eslint@8.47.0):
     dependencies:
-      '@typescript-eslint/parser': 6.4.0(eslint@8.47.0)(typescript@5.1.6)
       array-includes: 3.1.6
       array.prototype.findlastindex: 1.2.2
       array.prototype.flat: 1.3.1
@@ -4397,7 +4393,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.47.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.4.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0(@typescript-eslint/parser@6.4.0(eslint@8.47.0)(typescript@5.1.6))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1(eslint@8.47.0))(eslint@8.47.0))(eslint@8.47.0)
       has: 1.0.3
       is-core-module: 2.13.0
       is-glob: https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz
@@ -4407,6 +4403,8 @@ snapshots:
       object.values: 1.1.6
       semver: 6.3.1
       tsconfig-paths: 3.14.2
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.4.0(eslint@8.47.0)(typescript@5.1.6)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -4567,13 +4565,13 @@ snapshots:
 
   fraction.js@4.2.0: {}
 
-  framer-motion@https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz(react-dom@18.2.0)(react@18.2.0):
+  framer-motion@https://registry.npmmirror.com/framer-motion/-/framer-motion-10.16.1.tgz(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
       tslib: https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   fs.realpath@1.0.0: {}
 
@@ -4668,6 +4666,10 @@ snapshots:
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
+
+  goober@2.1.14(csstype@3.1.2):
+    dependencies:
+      csstype: 3.1.2
 
   gopd@1.0.1:
     dependencies:
@@ -4954,7 +4956,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next@13.4.19(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)(sass@1.66.1):
+  next@13.4.19(@babel/core@7.22.10)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz):
     dependencies:
       '@next/env': 13.4.19
       '@swc/helpers': 0.5.1
@@ -4963,7 +4965,6 @@ snapshots:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz
       styled-jsx: 5.1.1(@babel/core@7.22.10)(react@18.2.0)
       watchpack: 2.4.0
       zod: 3.21.4
@@ -4977,6 +4978,7 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 13.4.19
       '@next/swc-win32-ia32-msvc': 13.4.19
       '@next/swc-win32-x64-msvc': 13.4.19
+      sass: https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -5110,8 +5112,9 @@ snapshots:
   postcss-load-config@4.0.1(postcss@8.4.28):
     dependencies:
       lilconfig: 2.1.0
-      postcss: 8.4.28
       yaml: 2.3.1
+    optionalDependencies:
+      postcss: 8.4.28
 
   postcss-nested@6.0.1(postcss@8.4.28):
     dependencies:
@@ -5160,6 +5163,14 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+
+  react-hot-toast@2.4.1(csstype@3.1.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      goober: 2.1.14(csstype@3.1.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - csstype
 
   react-is@16.13.1: {}
 
@@ -5338,9 +5349,10 @@ snapshots:
 
   styled-jsx@5.1.1(@babel/core@7.22.10)(react@18.2.0):
     dependencies:
-      '@babel/core': 7.22.10
       client-only: 0.0.1
       react: 18.2.0
+    optionalDependencies:
+      '@babel/core': 7.22.10
 
   sucrase@3.34.0:
     dependencies:

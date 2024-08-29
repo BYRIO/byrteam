@@ -8,6 +8,7 @@ import { HTMLProps, ReactNode, useCallback, useEffect, useState } from 'react';
 
 import HeroBG1 from '@/assets/images/demo-hero-bg.jpg';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 
 function EmblaCarouselItemWrapper(props: { children: ReactNode }) {
   const { children } = props;
@@ -109,6 +110,16 @@ function HeroBG() {
 }
 
 export default function Hero() {
+  function handleCopy(value: string) {
+    navigator.clipboard
+      .writeText(value)
+      .then(() => {
+        toast.success('已复制到剪贴板');
+      })
+      .catch((e) => {
+        toast.error('复制失败');
+      });
+  }
   return (
     <motion.section className={clsx('relative')}>
       <HeroBG />
@@ -142,7 +153,17 @@ export default function Hero() {
                 target="_blank"
               >
                 【2024学年北邮人团队招新群】
-              </a>
+              </a>{' '}
+              或搜索qq群：
+              <span
+                className="pointer-events-auto"
+                onClick={() => {
+                  handleCopy('943588801');
+                }}
+              >
+                943588801
+              </span>
+              <br />
               了解更多吧
               {/* 想加入BYR Team？请将简历投递至邮箱
               <a
@@ -164,7 +185,7 @@ export default function Hero() {
               )}
               // href="https://byr-team.feishu.cn/share/base/form/shrcnalyjQyTjH21EXDzQJboW7e"
               // href="mailto:join@byr.ink"
-              href = "https://qm.qq.com/q/T0yhPA3GU2"
+              href="https://qm.qq.com/q/T0yhPA3GU2"
               rel="noreferrer noopener"
               target="_blank"
             >

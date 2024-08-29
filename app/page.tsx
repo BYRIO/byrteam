@@ -7,6 +7,7 @@ import Department from '@/components/contents/Department';
 import JoinAndReason from '@/components/contents/JoinAndReason';
 import SenpaiSaying from '@/components/contents/SenpaiSaying';
 import NoticeAndProcess from '@/components/contents/NoticeAndProcess';
+import { Toaster } from 'react-hot-toast';
 
 import { useEffect } from 'react';
 
@@ -16,6 +17,7 @@ export default function Home() {
   }, []);
   return (
     <>
+      <Toaster position="top-center" />
       <Hero />
       <AboutTeam />
       <Service />
