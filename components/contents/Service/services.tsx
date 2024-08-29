@@ -57,9 +57,19 @@ const services = [
         <p>“北邮校园网收费吗？” “不在校内又该怎么访问校内网站？”</p>
         <p>“我怎么又上不了网了？” “游戏延迟为什么这么高？”</p>
         <p>“不是吧，怎么网又炸了！”</p>
+        <p>
+          <b>校内诊断平台链接</b>{' '}
+          <a
+            className="ml-4 italic underline"
+            target="_blank"
+            href="https://buptnet.icu"
+          >
+            link
+          </a>
+        </p>
       </>
     ),
-    slogan: <>“网又炸了？校园网使用指南重磅上线！”</>,
+    slogan: <>“网又炸了？校园网使用指南和诊断平台重磅上线！”</>,
     url: 'https://wiki.buptnet.icu',
   },
   {
