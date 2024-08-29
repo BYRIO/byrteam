@@ -7,6 +7,7 @@ import ServiceCodimd from '@/assets/images/service/service-codimd.png';
 import ServiceMirrors from '@/assets/images/service/service-mirrors.png';
 import ServiceOverleaf from '@/assets/images/service/service-overleaf.png';
 import ServiceEfficiency from '@/assets/images/service/service-efficiency.png';
+import ServiceNetWiki from '@/assets/images/service/service-neticu-wiki.png';
 
 import { ReactNode } from 'react';
 
@@ -44,6 +45,22 @@ const services = [
     ),
     slogan: <>“我们致力于保障师生参加活动的体验”</>,
     url: 'https://dekt.bupt.edu.cn/qr?f=mp',
+  },
+  {
+    name: '校园网指南',
+    image: ServiceNetWiki.src,
+    description: (
+      <>
+        <p>
+          “校园网该怎么连？” “<b>mobile</b>和<b>portal</b>有什么区别？”
+        </p>
+        <p>“北邮校园网收费吗？” “不在校内又该怎么访问校内网站？”</p>
+        <p>“我怎么又上不了网了？” “游戏延迟为什么这么高？”</p>
+        <p>“不是吧，怎么网又炸了！”</p>
+      </>
+    ),
+    slogan: <>“网又炸了？校园网使用指南重磅上线！”</>,
+    url: 'https://wiki.buptnet.icu',
   },
   {
     name: 'Bitwarden',
@@ -84,19 +101,19 @@ const services = [
     slogan: <>“CI/CD真是太好用了.jpg”</>,
     url: 'https://git.byr.moe',
   },
-  {
-    name: 'Codimd',
-    image: ServiceCodimd.src,
-    description: (
-      <>
-        <p>
-          CodiMD是一个开源的实时协作markdown笔记本。它可以让你在网页上编辑markdown笔记，并且可以实时预览。你可以邀请其他人来协作编辑笔记，也可以将笔记分享给其他人。
-        </p>
-      </>
-    ),
-    slogan: <>“Markdown了解一下！”</>,
-    url: 'https://md.byr.moe',
-  },
+  // {
+  //   name: 'Codimd',
+  //   image: ServiceCodimd.src,
+  //   description: (
+  //     <>
+  //       <p>
+  //         CodiMD是一个开源的实时协作markdown笔记本。它可以让你在网页上编辑markdown笔记，并且可以实时预览。你可以邀请其他人来协作编辑笔记，也可以将笔记分享给其他人。
+  //       </p>
+  //     </>
+  //   ),
+  //   slogan: <>“Markdown了解一下！”</>,
+  //   url: 'https://md.byr.moe',
+  // },
   {
     name: '开源镜像服务',
     image: ServiceMirrors.src,
@@ -105,11 +122,11 @@ const services = [
         <p>
           当你还在为pip install, go add, cargo build, npm
           install发愁的时候，可以使用这个。
-          <a className="ml-4 italic underline" href="https://mirrors.byr.ink">
+          {/* <a className="ml-4 italic underline" href="https://mirrors.byr.ink">
             link
-          </a>
+          </a> */}
         </p>
-        <p>
+        {/* <p>
           如果你需要linux相关的镜像源还可以使用这个。
           <a
             className="ml-4 italic underline"
@@ -117,10 +134,11 @@ const services = [
           >
             link
           </a>
-        </p>
+        </p> */}
       </>
     ),
     slogan: <>“一个字：快！”</>,
+    url: 'https://mirrors.byr.ink',
   },
   {
     name: 'Overleaf',

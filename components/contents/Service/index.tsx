@@ -12,6 +12,7 @@ import Underline from '@/assets/images/service/underline.svg';
 import IconArrowTR from '@/assets/images/departments/icon-arrow-tr.svg';
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
 import { flushSync } from 'react-dom';
+import Link from 'next/link';
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
@@ -162,7 +163,14 @@ export default function Service() {
               <motion.div className="flex flex-col gap-2">
                 <div className="flex justify-between">
                   <motion.h3 className="inline-flex w-fit flex-col items-center text-2xl">
-                    {services[selected].name}
+                    {services[selected].url ? (
+                      <Link href={services[selected].url} target="_blank">
+                        {services[selected].name}
+                      </Link>
+                    ) : (
+                      services[selected].name
+                    )}
+
                     <Underline />
                   </motion.h3>
                   {services[selected].url && (
