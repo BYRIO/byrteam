@@ -163,8 +163,8 @@ export default function Service() {
               <motion.div className="flex flex-col gap-2">
                 <div className="flex justify-between">
                   <motion.h3 className="inline-flex w-fit flex-col items-center text-2xl">
-                    {services[selected].url ? (
-                      <Link href={services[selected].url} target="_blank">
+                    {services[selected].url !== undefined ? (
+                      <Link href={services[selected].url ?? ''} target="_blank">
                         {services[selected].name}
                       </Link>
                     ) : (
