@@ -145,7 +145,7 @@ export default function Hero() {
               Want You！
             </p>
             <p className="mt-3">
-              点击加入群聊
+              {/* 点击加入群聊
               <a
                 className="pointer-events-auto underline underline-offset-4"
                 href="https://qm.qq.com/q/T0yhPA3GU2"
@@ -164,8 +164,8 @@ export default function Hero() {
                 943588801
               </span>
               <br />
-              了解更多吧
-              {/* 想加入BYR Team？请将简历投递至邮箱
+              了解更多吧 */}
+              想加入BYR Team？请将简历投递至邮箱
               <a
                 href="mailto:join@byr.ink"
                 rel="noreferrer noopener"
@@ -173,7 +173,7 @@ export default function Hero() {
                 className="pointer-events-auto ml-1 underline"
               >
                 join@byr.ink
-              </a> */}
+              </a>
             </p>
           </div>
           <div className="front-medium flex justify-center">
@@ -184,8 +184,8 @@ export default function Hero() {
                 'mr-0 sm:mr-auto '
               )}
               // href="https://byr-team.feishu.cn/share/base/form/shrcnalyjQyTjH21EXDzQJboW7e"
-              // href="mailto:join@byr.ink"
-              href="https://qm.qq.com/q/T0yhPA3GU2"
+              href="mailto:join@byr.ink"
+              // href="https://qm.qq.com/q/T0yhPA3GU2"
               rel="noreferrer noopener"
               target="_blank"
             >

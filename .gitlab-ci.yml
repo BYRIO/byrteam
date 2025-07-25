@@ -1,0 +1,5 @@
+variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+
+include:
+    remote: '$CI_TEMPLATE_ORIGIN/scripts/gitlab/-/raw/main/frontend.yaml'
